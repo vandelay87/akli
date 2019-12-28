@@ -1,7 +1,34 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const path = require('path');
+const { createPageStructure } = require('./src/utils/createPageStructure');
 
-// You can delete this file if you're not using it
+exports.createPages = ({ graphql, actions }) => {
+  const pageTemplate = path.resolve('src/templates/page.js');
+
+  return graphql(`
+    {
+      allContentfulPage {
+        edges {
+          node {
+            id
+            slug
+          }
+        }
+      }
+    }
+  `).then((result) => {
+    if (result.errors) {
+      throw result.errors;
+    }
+
+    const pages = createPageStructure(result.data.allContentfulPage.edges);
+    pages.forEach((page) => {
+      actions.createPage({
+        path: page.slug,
+        component: pageTemplate,
+        context: {
+          id: page.id,
+        },
+      });
+    });
+  });
+};
