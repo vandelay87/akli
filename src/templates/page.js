@@ -1,11 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../layouts/layout';
-import ContentfulRichText from '../components/RichText/richText';
-
-const blockList = {
-  ContentfulRichText,
-};
+import componentList from '../utils/componentList';
 
 const Page = ({ data }) => {
   const page = data.contentfulPage;
@@ -14,7 +10,7 @@ const Page = ({ data }) => {
     <Layout>
       {page.contentBlocks
         && page.contentBlocks.map(({ __typename: componentType, ...component }) => {
-          const Component = blockList[componentType];
+          const Component = componentList[componentType];
           return <Component key={component.id} {...component} />;
         })}
     </Layout>
@@ -30,6 +26,9 @@ export const query = graphql`
           __typename
           ... on ContentfulRichText {
             ...RichText
+          }
+          ... on ContentfulHeading {
+            ...Heading
           }
         }
       }
