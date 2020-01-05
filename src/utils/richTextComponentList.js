@@ -1,4 +1,4 @@
-import ContentfulHeading from '../components/Heading/heading';
+import ContentfulHeading from '../components/heading/heading';
 
 export const componentList = {
   ContentfulHeading,

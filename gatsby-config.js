@@ -38,5 +38,6 @@ module.exports = {
         accessToken: process.env.AKLIAISSAT_CONTENTFUL_TOKEN,
       },
     },
+    'gatsby-plugin-styled-components',
   ],
 };

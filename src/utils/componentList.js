@@ -1,5 +1,5 @@
-import ContentfulRichText from '../components/RichText/richText';
-import ContentfulHeading from '../components/Heading/heading';
+import ContentfulRichText from '../components/richText/richText';
+import ContentfulHeading from '../components/heading/heading';
 
 const componentList = {
   ContentfulRichText,
