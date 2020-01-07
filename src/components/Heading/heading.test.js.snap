@@ -1,12 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`heading.js renders component 1`] = `
-<div>
-  <h1
-    className="sc-bdVaJa hwEFDw"
-    size={1}
-  >
-    Hello world
-  </h1>
-</div>
+<h1
+  className="sc-bdVaJa hwEFDw"
+  size={1}
+>
+  Hello world
+</h1>
+`;
+
+exports[`heading.js renders component 2`] = `
+<h3
+  className="sc-bdVaJa fCvSyX"
+  size={3}
+>
+  h3 heading
+</h3>
+`;
+
+exports[`heading.js renders component 3`] = `
+<h1
+  className="sc-bdVaJa elipZQ"
+  size={1}
+>
+  center align
+</h1>
 `;

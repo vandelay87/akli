@@ -10,11 +10,7 @@ export default {
 export const title = () => {
   const knob = text('Title', 'Hello world');
 
-  return (
-    <div>
-      <Heading title={knob} />
-    </div>
-  );
+  return <Heading title={knob} />;
 };
 
 export const size = () => {
@@ -24,22 +20,14 @@ export const size = () => {
     max: 6,
     step: 1,
   };
-  const knob = number('Size', 2, options);
+  const knob = number('Size', 3, options);
 
-  return (
-    <div>
-      <Heading title={`h${knob} heading`} size={knob} />
-    </div>
-  );
+  return <Heading title={`h${knob} heading`} size={knob} />;
 };
 
 export const align = () => {
   const options = ['left', 'right', 'center'];
-  const knob = select('Align', options, 'right');
+  const knob = select('Align', options, 'center');
 
-  return (
-    <div>
-      <Heading title={`${knob} align`} align={knob} />
-    </div>
-  );
+  return <Heading title={`${knob} align`} align={knob} />;
 };

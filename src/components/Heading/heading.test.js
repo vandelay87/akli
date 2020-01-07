@@ -1,20 +1,21 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { shallow } from 'enzyme';
-import { title } from './heading.stories';
+import { title, size, align } from './heading.stories';
 
 describe('heading.js', () => {
   it('renders component', () => {
-    const tree = renderer
+    const titleTree = renderer
       .create(title())
       .toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+    const sizeTree = renderer
+      .create(size())
+      .toJSON();
+    const alignTree = renderer
+      .create(align())
+      .toJSON();
 
-  it('renders title', () => {
-    const wrapper = shallow(title());
-    const wrapperTitle = title().props.children.props.title;
-
-    expect(wrapper.html()).toContain(wrapperTitle);
+    expect(titleTree).toMatchSnapshot();
+    expect(sizeTree).toMatchSnapshot();
+    expect(alignTree).toMatchSnapshot();
   });
 });
