@@ -31,13 +31,17 @@
     "@storybook/addon-knobs": "^5.2.8",
     "@storybook/addon-storysource": "^5.2.8",
     "@storybook/react": "^5.2.8",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^6.7.2",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-import": "^2.19.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^1.7.0",
-    "prettier": "^1.19.1"
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1",
+    "react-test-renderer": "^16.12.0"
   },
   "keywords": [
     "gatsby"
@@ -51,7 +55,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "test": "jest",
     "storybook": "NODE_ENV=production start-storybook -s static",
     "build-storybook": "NODE_ENV=production build-storybook -s static -o static/storybook",
     "clean-storybook": "rm -rf static/storybook"
