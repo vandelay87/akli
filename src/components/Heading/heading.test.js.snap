@@ -2,7 +2,7 @@
 
 exports[`heading.js renders component 1`] = `
 <h1
-  className="sc-bdVaJa hwEFDw"
+  className="sc-bdVaJa vmyRs"
   size={1}
 >
   Hello world
@@ -11,7 +11,7 @@ exports[`heading.js renders component 1`] = `
 
 exports[`heading.js renders component 2`] = `
 <h3
-  className="sc-bdVaJa fCvSyX"
+  className="sc-bdVaJa bOQwgh"
   size={3}
 >
   h3 heading
@@ -20,7 +20,7 @@ exports[`heading.js renders component 2`] = `
 
 exports[`heading.js renders component 3`] = `
 <h1
-  className="sc-bdVaJa elipZQ"
+  className="sc-bdVaJa dFHsyD"
   size={1}
 >
   center align

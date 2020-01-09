@@ -27,8 +27,9 @@ module.exports = {
     "import/no-extraneous-dependencies": [
       "error",
       {
-        "devDependencies": ["src/stories/**"]
+        "devDependencies": ["**/*.stories.js", "**/*.test.js"]
       }
     ],
+    "react/jsx-props-no-spreading": 0,
   },
 };

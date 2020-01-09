@@ -19,14 +19,26 @@ const richTextRenderer = (richTextJSON) => {
     },
     renderNode: {
       [BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>,
-      [BLOCKS.HEADING_1]: (node, children) => <h1>{children}</h1>,
-      [BLOCKS.HEADING_2]: (node, children) => <h2>{children}</h2>,
-      [BLOCKS.HEADING_3]: (node, children) => <h3>{children}</h3>,
-      [BLOCKS.HEADING_4]: (node, children) => <h4>{children}</h4>,
-      [BLOCKS.HEADING_5]: (node, children) => <h5>{children}</h5>,
-      [BLOCKS.HEADING_6]: (node, children) => <h6>{children}</h6>,
+      [BLOCKS.HEADING_1]: (node, children) => renderComponent('ContentfulHeading', { title: children.toString(), size: 1 }),
+      [BLOCKS.HEADING_2]: (node, children) => renderComponent('ContentfulHeading', { title: children.toString(), size: 2 }),
+      [BLOCKS.HEADING_3]: (node, children) => renderComponent('ContentfulHeading', { title: children.toString(), size: 3 }),
+      [BLOCKS.HEADING_4]: (node, children) => renderComponent('ContentfulHeading', { title: children.toString(), size: 4 }),
+      [BLOCKS.HEADING_5]: (node, children) => renderComponent('ContentfulHeading', { title: children.toString(), size: 5 }),
+      [BLOCKS.HEADING_6]: (node, children) => renderComponent('ContentfulHeading', { title: children.toString(), size: 6 }),
       [BLOCKS.LIST_ITEM]: (node, children) => <>{children}</>,
       [BLOCKS.EMBEDDED_ENTRY]: (node) => {
+        const { fields } = node.data.target;
+        const contentType = typeList(node.data.target.sys.contentType.sys.id);
+
+        const cleanFields = Object.fromEntries(
+          Object.entries(fields).map(([key, value]) => [
+            key, value[locale] ? value[locale] : value,
+          ]),
+        );
+
+        return renderComponent(contentType, cleanFields);
+      },
+      [INLINES.EMBEDDED_ENTRY]: (node) => {
         const { fields } = node.data.target;
         const contentType = typeList(node.data.target.sys.contentType.sys.id);
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { robotoRegular } from '../../styles/fonts';
 
 const Heading = ({ title, size, align }) => (
   <StyledHeading as={`h${size}`} align={align} size={size}>{title}</StyledHeading>
@@ -12,6 +13,7 @@ const lineHeight = ['6rem', '3.75rem', '3.125rem', '2.5rem', '2rem', '2rem'];
 const letterSpacing = ['-.01562em', '-0.0083333333em', 'nornal', '.0073529412em', 'normal', '.0125em'];
 
 const StyledHeading = styled.h1`
+  ${robotoRegular}
   font-size: ${(props) => (fontSize[props.size - 1])};
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
