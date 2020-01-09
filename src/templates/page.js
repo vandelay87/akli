@@ -2,13 +2,15 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import Layout from '../layouts/layout';
+import SEO from '../utils/seo';
 import componentList from '../utils/componentList';
 
 const Page = ({ data }) => {
-  const { contentBlocks } = data.contentfulPage;
+  const { title, description, contentBlocks } = data.contentfulPage;
 
   return (
     <Layout>
+      <SEO title={title} description={description} />
       {contentBlocks.map(({ __typename: componentType, ...component }) => {
         const Component = componentList[componentType];
         const cleanProps = component;
@@ -26,6 +28,7 @@ export const query = graphql`
   query PageQuery($id: String!) {
     contentfulPage(id: { eq: $id }) {
       title
+      description
       contentBlocks {
         ... on Node {
           __typename
@@ -44,6 +47,8 @@ export const query = graphql`
 Page.propTypes = {
   data: PropTypes.shape({
     contentfulPage: PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      description: PropTypes.string,
       contentBlocks: PropTypes.array,
     }),
   }),
