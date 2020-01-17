@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`header.js renders component 1`] = `
+<header
+  className="sc-bdVaJa hkQuXJ"
+>
+  <span
+    className="sc-bwzfXH dahGuG"
+  >
+    My Website
+  </span>
+</header>
+`;

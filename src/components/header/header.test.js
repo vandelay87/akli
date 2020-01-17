@@ -1,10 +1,10 @@
 import renderer from 'react-test-renderer';
-import { article } from './richText.stories';
+import { header } from './header.stories';
 
-describe('richText.js', () => {
+describe('header.js', () => {
   it('renders component', () => {
     const tree = renderer
-      .create(article())
+      .create(header())
       .toJSON();
 
     expect(tree).toMatchSnapshot();

@@ -2,8 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-const SEO = ({ title, description }) => (
+const SEO = ({ title, description, lang }) => (
   <Helmet
+    htmlAttributes={{
+      lang,
+    }}
     title={title}
     meta={[
       {
@@ -29,10 +32,12 @@ const SEO = ({ title, description }) => (
 SEO.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
+  lang: PropTypes.string,
 };
 
 SEO.defaultProps = {
   description: '',
+  lang: process.env.AKLIAISSAT_CONTENTFUL_LOCALE || 'en-GB',
 };
 
 export default SEO;

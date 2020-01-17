@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import Layout from '../layouts/layout';
-import SEO from '../utils/seo';
+import SEO from '../hooks/seo';
 import componentList from '../utils/componentList';
 
 const Page = ({ data }) => {
