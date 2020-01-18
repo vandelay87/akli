@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`linkCTA.js renders component 1`] = `
+<a
+  aria-current="page"
+  className="sc-bdVaJa inBooY"
+  href="/"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  style={Object {}}
+>
+  click me
+</a>
+`;
+
+exports[`linkCTA.js renders component 2`] = `
+<a
+  className="sc-bdVaJa inBooY"
+  href="https://www.google.com"
+  rel="noreferrer noopener"
+  target="_blank"
+>
+  google.com
+</a>
+`;

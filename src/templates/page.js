@@ -38,6 +38,9 @@ export const query = graphql`
           ... on ContentfulHeading {
             ...Heading
           }
+          ... on ContentfulLink {
+            ...Link
+          }
         }
       }
     }

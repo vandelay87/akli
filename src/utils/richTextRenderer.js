@@ -1,14 +1,22 @@
 import React from 'react';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, INLINES, MARKS } from '@contentful/rich-text-types';
+import fromEntries from 'object.fromentries';
 import { componentList, typeList } from './richTextComponentList';
+import regexValidator from './regexValidator';
 
 const richTextRenderer = (richTextJSON) => {
   const locale = process.env.AKLIAISSAT_CONTENTFUL_LOCALE || 'en-GB';
 
   const renderComponent = (type, fields) => {
     const Component = componentList[type];
-    return <Component key={fields.id} {...fields} />;
+    const cleanFields = fromEntries(
+      Object.entries(fields).map(([key, value]) => [
+        key, typeof value[locale] !== 'undefined' ? value[locale] : value,
+      ]),
+    );
+
+    return <Component key={fields.id} {...cleanFields} />;
   };
 
   const options = {
@@ -30,25 +38,19 @@ const richTextRenderer = (richTextJSON) => {
         const { fields } = node.data.target;
         const contentType = typeList(node.data.target.sys.contentType.sys.id);
 
-        const cleanFields = Object.fromEntries(
-          Object.entries(fields).map(([key, value]) => [
-            key, value[locale] ? value[locale] : value,
-          ]),
-        );
-
-        return renderComponent(contentType, cleanFields);
+        return renderComponent(contentType, fields);
       },
       [INLINES.EMBEDDED_ENTRY]: (node) => {
         const { fields } = node.data.target;
         const contentType = typeList(node.data.target.sys.contentType.sys.id);
 
-        const cleanFields = Object.fromEntries(
-          Object.entries(fields).map(([key, value]) => [
-            key, value[locale] ? value[locale] : value,
-          ]),
-        );
+        return renderComponent(contentType, fields);
+      },
+      [INLINES.HYPERLINK]: (node, children) => {
+        const { uri } = node.data;
+        const external = regexValidator.url.test(uri);
 
-        return renderComponent(contentType, cleanFields);
+        return renderComponent('ContentfulLink', { title: children.toString(), link: uri, external });
       },
     },
   };
