@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`footer.js renders component 1`] = `
+<footer
+  className="sc-bwzfXH iuGtdQ"
+>
+  <ul
+    className="sc-htpNat kjVJHN"
+  >
+    <li>
+      <a
+        aria-current="page"
+        className="sc-bdVaJa inBooY"
+        href="/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        style={Object {}}
+      >
+        Home
+      </a>
+    </li>
+    <li>
+      <a
+        className="sc-bdVaJa inBooY"
+        href="https://www.google.com"
+        rel="noreferrer noopener"
+        target="_blank"
+      >
+        Google
+      </a>
+    </li>
+  </ul>
+</footer>
+`;

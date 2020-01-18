@@ -5,6 +5,7 @@ const useWebsiteSettings = () => {
     query WebsiteSettingsQuery {
       contentfulWebsiteSettings {
         ...Header
+        ...Footer
       }
     }
   `);
