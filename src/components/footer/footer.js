@@ -8,7 +8,10 @@ const Footer = ({ navigation }) => (
   <StyledFooter>
     <StyledNavigation>
       {navigation.map((link) => (
-        <li key={link.id}><LinkCTA title={link.title} link={link.link} external={link.external} /></li>))}
+        <li key={link.id}>
+          <LinkCTA title={link.title} link={link.link} external={link.external} />
+        </li>
+      ))}
     </StyledNavigation>
   </StyledFooter>
 );

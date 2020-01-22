@@ -8,6 +8,8 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     ${robotoRegular}
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
   }
 `;
 

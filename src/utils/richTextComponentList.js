@@ -8,11 +8,11 @@ export const componentList = {
 
 export const typeList = (contentType) => {
   switch (contentType) {
-    case 'heading':
-      return 'ContentfulHeading';
-    case 'link':
-      return 'ContentfulLink';
-    default:
-      return '';
+  case 'heading':
+    return 'ContentfulHeading';
+  case 'link':
+    return 'ContentfulLink';
+  default:
+    return '';
   }
 };

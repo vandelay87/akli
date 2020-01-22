@@ -56,6 +56,9 @@ export const query = graphql`
           ... on ContentfulLink {
             ...Link
           }
+          ... on ContentfulTable {
+            ...Table
+          }
         }
         ... on ContentfulSection {
           id
@@ -70,6 +73,9 @@ export const query = graphql`
               }
               ... on ContentfulLink {
                 ...Link
+              }
+              ... on ContentfulTable {
+                ...Table
               }
             }
           }

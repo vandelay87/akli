@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dataTable.js renders component 1`] = `
+<div
+  className="sc-bdVaJa bbUuJY"
+>
+  <table
+    aria-label="Shop table"
+    className="sc-bwzfXH cXypqu"
+    label="Shop table"
+  >
+    <thead
+      className="sc-htpNat faekKl"
+    >
+      <tr>
+        <th>
+          Item
+        </th>
+        <th>
+          Description
+        </th>
+        <th>
+          Current price
+        </th>
+        <th>
+          In stock
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      className="sc-bxivhb cvbOMu"
+    >
+      <tr>
+        <td
+          className="sc-ifAKCX hhgZUI"
+        >
+          Coffee
+        </td>
+        <td
+          className="sc-ifAKCX hhgZUI"
+        >
+          A nice cup of coffee. Hot!
+        </td>
+        <td
+          className="sc-ifAKCX jRedLd"
+        >
+          £2.60
+        </td>
+        <td
+          className="sc-ifAKCX hhgZUI"
+        >
+          Yes
+        </td>
+      </tr>
+      <tr>
+        <td
+          className="sc-ifAKCX hhgZUI"
+        >
+          TV
+        </td>
+        <td
+          className="sc-ifAKCX hhgZUI"
+        >
+          42inch, 4k, widescreen television. Second hand.
+        </td>
+        <td
+          className="sc-ifAKCX jRedLd"
+        >
+          £399
+        </td>
+        <td
+          className="sc-ifAKCX hhgZUI"
+        >
+          No
+        </td>
+      </tr>
+      <tr>
+        <td
+          className="sc-ifAKCX hhgZUI"
+        >
+          Electric guitar
+        </td>
+        <td
+          className="sc-ifAKCX hhgZUI"
+        >
+          Limited edition electric guitar. Poor condition. Strings need to be changed.
+        </td>
+        <td
+          className="sc-ifAKCX jRedLd"
+        >
+          £260
+        </td>
+        <td
+          className="sc-ifAKCX hhgZUI"
+        >
+          Yes
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
