@@ -8,13 +8,13 @@ import componentList from '../utils/componentList';
 
 const renderComponent = (componentType, component) => {
   const Component = componentList[componentType];
-  const cleanProps = component;
+  const props = component;
 
-  Object.keys(cleanProps).forEach(
-    (key) => (cleanProps[key] == null) && delete cleanProps[key],
+  Object.keys(props).forEach(
+    (key) => (props[key] == null) && delete props[key],
   );
 
-  return <Component key={cleanProps.id} {...cleanProps} />;
+  return <Component key={component.id} {...props} />;
 };
 
 const Page = ({ data }) => {
@@ -90,7 +90,9 @@ Page.propTypes = {
     contentfulPage: PropTypes.shape({
       title: PropTypes.string.isRequired,
       description: PropTypes.string,
-      contentBlocks: PropTypes.array,
+      contentBlocks: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.string,
+      })),
     }),
   }),
 };

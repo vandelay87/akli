@@ -8,10 +8,7 @@ export const query = graphql`
         rowData {
             id
             isNumeric
-            data {
-                id
-                data
-            }
+            value
         }
     }
     rows {
@@ -19,10 +16,7 @@ export const query = graphql`
         rowData {
             id
             isNumeric
-            data {
-                id
-                data
-            }
+            value
         }
     }
   }

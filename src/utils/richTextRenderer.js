@@ -1,20 +1,57 @@
 import React from 'react';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, INLINES, MARKS } from '@contentful/rich-text-types';
-import fromEntries from 'object.fromentries';
 import { componentList, typeList } from './richTextComponentList';
 import regexValidator from './regexValidator';
 
 const richTextRenderer = (richTextJSON) => {
-  const locale = process.env.AKLIAISSAT_CONTENTFUL_LOCALE || 'en-GB';
+  const cleanProperties = (dirtyObj) => {
+    const cleanObj = JSON.parse(JSON.stringify(dirtyObj));
+    const locale = process.env.AKLIAISSAT_CONTENTFUL_LOCALE || 'en-GB';
+  
+    /* eslint-disable no-param-reassign */
+    const deepObjectLoop = (obj) => {
+      Object.keys(obj).forEach(key => {
+        if (typeof obj[key][locale] !== 'undefined') {
+          const localeValue = obj[key][locale];
+  
+          delete obj[key][locale];
+          obj[key] = localeValue;
+        }
+  
+        if (typeof obj[key].sys !== 'undefined' 
+        && typeof obj[key].sys.id !== 'undefined') {
+          const idValue = obj[key].sys.id;
+  
+          delete obj[key].sys;
+          obj[key].id = idValue;
+        }
+  
+        if (typeof obj[key].fields !== 'undefined') {
+          const localeValue = obj[key].fields;
+          const idValue = obj[key].id;
+  
+          delete obj[key].fields;
+          obj[key] = localeValue;
+  
+          if (idValue !== 'undefined') {
+            obj[key].id = idValue;
+          }
+        }
+  
+        if (typeof obj[key] === 'object') {
+          deepObjectLoop(obj[key]);
+        }
+      });
+    }
+  
+    deepObjectLoop(cleanObj);
+    return cleanObj;
+  }
 
   const renderComponent = (type, fields) => {
     const Component = componentList[type];
-    const cleanFields = fromEntries(
-      Object.entries(fields).map(([key, value]) => [
-        key, typeof value[locale] !== 'undefined' ? value[locale] : value,
-      ]),
-    );
+    const cleanFields = cleanProperties(fields);
 
     return <Component key={fields.id} {...cleanFields} />;
   };

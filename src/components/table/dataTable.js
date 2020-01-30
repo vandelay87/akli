@@ -9,15 +9,15 @@ const DataTable = ({ label, header, rows }) => (
     <StyledTable label={label}>
       <StyledHead>
         <tr>
-          {header.rowData.map((head) => <th key={head.data.id}>{head.data.data}</th>)}
+          {header.rowData.map((head) => <th key={head.id} role="columnheader">{head.value}</th>)}
         </tr>
       </StyledHead>
       <StyledBody>
         {rows.map((row) => (
           <tr key={row.id}>
             {row.rowData.map((td) => (
-              <StyledTableData key={td.data.id} numeric={td.isNumeric}>
-                {td.data.data}
+              <StyledTableData key={td.id} numeric={td.isNumeric}>
+                {td.value}
               </StyledTableData>
             ))}
           </tr>
@@ -85,10 +85,7 @@ DataTable.propTypes = {
   header: PropTypes.shape({
     rowData: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.string,
-      data: PropTypes.shape({
-        id: PropTypes.string,
-        data: PropTypes.string
-      })
+      value: PropTypes.string
     })),
   }).isRequired,
   rows: PropTypes.arrayOf(PropTypes.shape({
@@ -96,10 +93,7 @@ DataTable.propTypes = {
     rowData: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.string,
       isNumeric: PropTypes.bool,
-      data: PropTypes.shape({
-        id: PropTypes.string,
-        data: PropTypes.string,
-      }),
+      value: PropTypes.string,
     })),
   })).isRequired,
 };
