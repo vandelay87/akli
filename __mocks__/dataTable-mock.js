@@ -1,28 +1,20 @@
 export const header = {
   rowData: [
     {
-      data: {
-        id: 'itemTitle',
-        data: 'Item',
-      },
+      id: 'itemTitle',
+      value: 'Item',
     },
     {
-      data: {
-        id: 'itemDescription',
-        data: 'Description',
-      },
+      id: 'itemDescription',
+      value: 'Description',
     },
     {
-      data: {
-        id: 'priceTitle',
-        data: 'Current price',
-      },
+      id: 'priceTitle',
+      value: 'Current price',
     },
     {
-      data: {
-        id: 'stockTitle',
-        data: 'In stock',
-      },
+      id: 'stockTitle',
+      value: 'In stock',
     },
   ],
 };
@@ -32,29 +24,21 @@ export const rows = [
     id: 'row1',
     rowData: [
       {
-        data: {
-          id: 'coffeeLabel',
-          data: 'Coffee',
-        },
+        id: 'coffeeLabel',
+        value: 'Coffee',
       },
       {
-        data: {
-          id: 'coffeeDescription',
-          data: 'A nice cup of coffee. Hot!',
-        },
+        id: 'coffeeDescription',
+        value: 'A nice cup of coffee. Hot!',
       },
       {
         isNumeric: true,
-        data: {
-          id: 'coffeePrice',
-          data: '£2.60',
-        },
+        id: 'coffeePrice',
+        value: '£2.60',
       },
       {
-        data: {
-          id: 'coffeeStock',
-          data: 'Yes',
-        },
+        id: 'coffeeStock',
+        value: 'Yes',
       },
     ],
   },
@@ -62,29 +46,21 @@ export const rows = [
     id: 'row2',
     rowData: [
       {
-        data: {
-          id: 'tvLabel',
-          data: 'TV',
-        },
+        id: 'tvLabel',
+        value: 'TV',
       },
       {
-        data: {
-          id: 'tvDescription',
-          data: '42inch, 4k, widescreen television. Second hand.',
-        },
+        id: 'tvDescription',
+        value: '42inch, 4k, widescreen television. Second hand.',
       },
       {
         isNumeric: true,
-        data: {
-          id: 'tvPrice',
-          data: '£399',
-        },
+        id: 'tvPrice',
+        value: '£399',
       },
       {
-        data: {
-          id: 'tvStock',
-          data: 'No',
-        },
+        id: 'tvStock',
+        value: 'No',
       },
     ],
   },
@@ -92,30 +68,22 @@ export const rows = [
     id: 'row3',
     rowData: [
       {
-        data: {
-          id: 'guitarLabel',
-          data: 'Electric guitar',
-        },
+        id: 'guitarLabel',
+        value: 'Electric guitar',
       },
       {
-        data: {
-          id: 'guitarDescription',
-          data: 'Limited edition electric guitar. Poor condition. Strings need to be changed.',
-        },
+        id: 'guitarDescription',
+        value: 'Limited edition electric guitar. Poor condition. Strings need to be changed.',
       },
       {
         isNumeric: true,
-        data: {
-          id: 'guitarPrice',
-          data: '£260',
-        },
+        id: 'guitarPrice',
+        value: '£260',
       },
       {
-        data: {
-          id: 'guitarStock',
-          data: 'Yes',
-        },
+        id: 'guitarStock',
+        value: 'Yes',
       },
     ],
   }
-]
+];

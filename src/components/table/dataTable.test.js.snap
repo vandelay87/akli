@@ -13,16 +13,24 @@ exports[`dataTable.js renders component 1`] = `
       className="sc-htpNat faekKl"
     >
       <tr>
-        <th>
+        <th
+          role="columnheader"
+        >
           Item
         </th>
-        <th>
+        <th
+          role="columnheader"
+        >
           Description
         </th>
-        <th>
+        <th
+          role="columnheader"
+        >
           Current price
         </th>
-        <th>
+        <th
+          role="columnheader"
+        >
           In stock
         </th>
       </tr>
