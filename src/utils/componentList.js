@@ -3,6 +3,7 @@ import ContentfulHeading from '../components/heading/heading';
 import ContentfulLink from '../components/link/linkCTA';
 import ContentfulSection from '../layouts/sectionBlock';
 import ContentfulTable from '../components/table/dataTable';
+import ContentfulCards from '../components/cards/cards';
 
 const componentList = {
   ContentfulRichText,
@@ -10,6 +11,7 @@ const componentList = {
   ContentfulLink,
   ContentfulSection,
   ContentfulTable,
+  ContentfulCards,
 };
 
 export default componentList;
