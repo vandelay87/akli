@@ -12,14 +12,14 @@ const richTextRenderer = (richTextJSON) => {
     /* eslint-disable no-param-reassign */
     const deepObjectLoop = (obj) => {
       Object.keys(obj).forEach(key => {
-        if (typeof obj[key][locale] !== 'undefined') {
+        if (obj[key] && typeof obj[key][locale] !== 'undefined') {
           const localeValue = obj[key][locale];
   
           delete obj[key][locale];
           obj[key] = localeValue;
         }
   
-        if (typeof obj[key].sys !== 'undefined' 
+        if (obj[key] && typeof obj[key].sys !== 'undefined' 
         && typeof obj[key].sys.id !== 'undefined') {
           const idValue = obj[key].sys.id;
   
@@ -27,7 +27,7 @@ const richTextRenderer = (richTextJSON) => {
           obj[key].id = idValue;
         }
   
-        if (typeof obj[key].fields !== 'undefined') {
+        if (obj[key] && typeof obj[key].fields !== 'undefined') {
           const localeValue = obj[key].fields;
           const idValue = obj[key].id;
   
@@ -44,16 +44,20 @@ const richTextRenderer = (richTextJSON) => {
         }
       });
     }
-  
+
     deepObjectLoop(cleanObj);
     return cleanObj;
+  }
+
+  const getID = (name, propID) => {
+    return propID || Math.random().toString(36).replace('0.',`${name}_` || '').toLowerCase();
   }
 
   const renderComponent = (type, fields) => {
     const Component = componentList[type];
     const cleanFields = cleanProperties(fields);
 
-    return <Component key={fields.id} {...cleanFields} />;
+    return <Component key={getID(type, fields.id)} {...cleanFields} />;
   };
 
   const options = {
@@ -71,6 +75,11 @@ const richTextRenderer = (richTextJSON) => {
       [BLOCKS.HEADING_5]: (node, children) => renderComponent('ContentfulHeading', { title: children.toString(), size: 5 }),
       [BLOCKS.HEADING_6]: (node, children) => renderComponent('ContentfulHeading', { title: children.toString(), size: 6 }),
       [BLOCKS.LIST_ITEM]: (node, children) => <>{children}</>,
+      [BLOCKS.EMBEDDED_ASSET]: (node) => {
+        const { fields } = node.data.target;
+
+        return renderComponent('ContentfulFigureImage', { image:{fields} });
+      },
       [BLOCKS.EMBEDDED_ENTRY]: (node) => {
         const { fields } = node.data.target;
         const contentType = typeList(node.data.target.sys.contentType.sys.id);
