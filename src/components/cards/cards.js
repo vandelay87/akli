@@ -15,7 +15,11 @@ const Cards = ({ list }) => (
 );
 
 Cards.propTypes = {
-  list: PropTypes.string.isRequired,
+  list: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+    description: PropTypes.string,
+  })).isRequired,
 };
 
 export default Cards;

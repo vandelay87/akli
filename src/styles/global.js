@@ -10,6 +10,16 @@ const GlobalStyles = createGlobalStyle`
     ${robotoRegular}
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+
+    p {
+      ${robotoRegular}
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-weight: 400;
+      letter-spacing: .03125em;
+    }
   }
 `;
 
