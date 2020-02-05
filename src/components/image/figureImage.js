@@ -2,12 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Img from "gatsby-image";
 import styled from 'styled-components';
+import { applyStyleModifiers } from 'styled-components-modifiers';
 import { robotoRegular } from '../../styles/fonts';
 import { color } from '../../styles/colors';
 import { above } from '../../styles/breakpoints';
 
 const FigureImage = ({ image, caption, align, maxWidth }) => (
-  <StyledFigure maxWidth={maxWidth || image.file.details.image.width} float={align}>
+  <StyledFigure modifiers={caption && 'caption'} maxWidth={maxWidth || image.file.details.image.width} float={align}>
     {typeof image.fluid !== 'undefined' ?(
       <Img fluid={image.fluid} alt={image.description} />
     ):(
@@ -17,9 +18,18 @@ const FigureImage = ({ image, caption, align, maxWidth }) => (
   </StyledFigure>
 );
 
+const IMAGE_CONFIG = {
+  caption: () => `
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  `,
+};
 const StyledFigure = styled.figure`
   ${robotoRegular};
   max-width: ${(props) => (props.maxWidth ? `${props.maxWidth}px` : 'none')};
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius: 4px;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
 
   ${above.tablet`
     float: ${(props) => (props.float)};
@@ -28,6 +38,8 @@ const StyledFigure = styled.figure`
   img {
     width: 100%;
     vertical-align: middle;
+    border-radius: 3px;
+    ${applyStyleModifiers(IMAGE_CONFIG)}; 
   }
 `;
 const StyledCaption = styled.figcaption`
@@ -38,6 +50,8 @@ const StyledCaption = styled.figcaption`
   padding: 16px;
   background: ${color.primary};
   color: ${color.onPrimary};
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
 `;
 
 FigureImage.propTypes = {
