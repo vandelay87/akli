@@ -7,8 +7,14 @@ export const query = graphql`
       id
       title
       subtitle
+      image {
+        file {
+          url
+        }
+      }
       description
       link
+      category
     }
   }
 `;
