@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`figureImage.js renders component 1`] = `
+<button
+  className="sc-bwzfXH ixYnSQ"
+  onClick={[Function]}
+  role="button"
+>
+  Click me
+  <div
+    className="sc-bdVaJa hMQdQq"
+    color="#1976d2"
+    onMouseDown={[Function]}
+  />
+</button>
+`;
+
+exports[`figureImage.js renders component 2`] = `
+<button
+  className="sc-bwzfXH jgAzNz"
+  onClick={[Function]}
+  role="button"
+>
+  Toggle raised
+  <div
+    className="sc-bdVaJa hMQdQq"
+    color="#1976d2"
+    onMouseDown={[Function]}
+  />
+</button>
+`;
