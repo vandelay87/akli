@@ -22,7 +22,7 @@ export const cardsWithImageMock = [
     subtitle: 'email@facebook.com',
     image: {
       file: {
-        url: 'https://via.placeholder.com/200x120',
+        url: 'https://via.placeholder.com/400x200',
       }
     },
     description: 'Connect with friends, family and other people you know. Share photos and videos, send messages and get updates.',
@@ -33,7 +33,7 @@ export const cardsWithImageMock = [
     subtitle: 'email@twitter.com',
     image: {
       file: {
-        url: 'https://via.placeholder.com/200x120',
+        url: 'https://via.placeholder.com/400x200',
       }
     },
     description: 'See what is happening in the world right now. Join Twitter today. Sign up Log In.',
@@ -44,7 +44,7 @@ export const cardsWithImageMock = [
     subtitle: 'email@linkedin.com',
     image: {
       file: {
-        url: 'https://via.placeholder.com/200x120',
+        url: 'https://via.placeholder.com/400x200',
       }
     },
     description: 'Manage your professional identity. Build and engage with your professional network. Access knowledge, insights and opportunities.',

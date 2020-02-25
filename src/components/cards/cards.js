@@ -12,7 +12,7 @@ const Cards = ({ list }) => (
   <StyledSection>
     {list.map((card) => (
       <StyledCard key={card.id}>
-        {card.image && <FigureImage image={card.image} maxWidth='300' />}
+        {card.image && <FigureImage image={card.image} />}
         <StyledCard.Body>
           <Heading title={card.title} size={2} />
           {card.subtitle && <Heading title={card.subtitle} size={3} />}
@@ -37,20 +37,34 @@ const StyledCard = styled.article`
   border-radius: 4px;
   box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
   margin: 16px 6px;
-  max-width: 360px;
+  max-width: 400px;
 
   ${above.tablet`
-    flex: 0 1 40%;
+    flex: 1 1 40%;
   `}
 
   ${above.desktop`
-    flex: 0 1 32%;
+    flex: 1 1 32%;
   `}
 
   figure {
     border: none;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     box-shadow: none;
-    margin: 8px auto 0;
+    margin: 0 auto;
+    text-align: center;
+
+    img {
+      max-height: 200px;
+      max-width: 100%;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
   }
 
   button {
@@ -83,6 +97,7 @@ StyledCard.Body = styled.div`
     letter-spacing: .01786em;
     line-height: 1.25rem;
     font-weight: 400;
+    margin: 14px auto 7px;
   }
 `;
 

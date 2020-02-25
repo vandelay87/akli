@@ -7,16 +7,20 @@ import { robotoRegular } from '../../styles/fonts';
 import { color } from '../../styles/colors';
 import { above } from '../../styles/breakpoints';
 
-const FigureImage = ({ image, caption, align, maxWidth }) => (
-  <StyledFigure modifiers={caption && 'caption'} maxWidth={maxWidth || image.file.details.image.width} float={align}>
-    {typeof image.fluid !== 'undefined' ?(
-      <Img fluid={image.fluid} alt={image.description} />
-    ):(
-      <img src={image.file.url} alt={image.description} />
-    )}
-    {caption && <StyledCaption>{caption}</StyledCaption>}
-  </StyledFigure>
-);
+const FigureImage = ({ image, caption, align, maxWidth }) => {
+  const getWidth = image.file.details ? image.file.details.image.width : 'none';
+
+  return (
+    <StyledFigure modifiers={caption && 'caption'} maxWidth={maxWidth || getWidth} float={align}>
+      {typeof image.fluid !== 'undefined' ?(
+        <Img fluid={image.fluid} alt={image.description} />
+      ):(
+        <img src={image.file.url} alt={image.description} />
+      )}
+      {caption && <StyledCaption>{caption}</StyledCaption>}
+    </StyledFigure>
+  );
+};
 
 const IMAGE_CONFIG = {
   caption: () => `
@@ -36,7 +40,8 @@ const StyledFigure = styled.figure`
   `}
 
   img {
-    width: 100%;
+    width: auto;
+    max-width: 100%;
     vertical-align: middle;
     border-radius: 3px;
     ${applyStyleModifiers(IMAGE_CONFIG)}; 
