@@ -50,6 +50,7 @@ const StyledButton = styled.button`
   &:hover {
     background: #f6fafd;
     color: #1976d2;
+    cursor: pointer;
   }
 
   &:focus {

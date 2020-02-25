@@ -1,7 +1,7 @@
 import React from 'react';
 import { object } from '@storybook/addon-knobs';
 import Cards from './cards';
-import { cardMock, cardWithSubtitleMock, cardsWithImageMock } from '../../../__mocks__/cards-mock';
+import { cardMock, cardWithSubtitleMock, cardsWithImageMock, cardWithLinkMock } from '../../../__mocks__/cards-mock';
 
 export default {
   component: Cards,
@@ -22,6 +22,12 @@ export const cardWithSubtitle = () => {
 
 export const cardsWithImage = () => {
   const knob = object('Cards', cardsWithImageMock);
+
+  return <Cards list={knob} />;
+};
+
+export const cardWithLink = () => {
+  const knob = object('Card', cardWithLinkMock);
 
   return <Cards list={knob} />;
 };
