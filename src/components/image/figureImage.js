@@ -7,20 +7,18 @@ import { robotoRegular } from '../../styles/fonts';
 import { color } from '../../styles/colors';
 import { above } from '../../styles/breakpoints';
 
-const FigureImage = ({ image, caption, align, maxWidth }) => {
-  const getWidth = image.file.details ? image.file.details.image.width : 'none';
+const getWidth = imageDetails => imageDetails ? imageDetails.image.width : '';
 
-  return (
-    <StyledFigure modifiers={caption && 'caption'} maxWidth={maxWidth || getWidth} float={align}>
-      {typeof image.fluid !== 'undefined' ?(
-        <Img fluid={image.fluid} alt={image.description} />
-      ):(
-        <img src={image.file.url} alt={image.description} />
-      )}
-      {caption && <StyledCaption>{caption}</StyledCaption>}
-    </StyledFigure>
-  );
-};
+const FigureImage = ({ image, caption, align, maxWidth }) => (
+  <StyledFigure modifiers={caption && 'caption'} maxWidth={maxWidth || getWidth(image.file.details)} float={align}>
+    {typeof image.fluid !== 'undefined' ?(
+      <Img fluid={image.fluid} alt={image.description} />
+    ):(
+      <img src={image.file.url} alt={image.description} />
+    )}
+    {caption && <StyledCaption>{caption}</StyledCaption>}
+  </StyledFigure>
+);
 
 const IMAGE_CONFIG = {
   caption: () => `
@@ -76,7 +74,6 @@ FigureImage.propTypes = {
   align: PropTypes.string,
   maxWidth: PropTypes.string,
 };
-
 FigureImage.defaultProps = {
   caption: '',
   align: 'none',
