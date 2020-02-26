@@ -2,7 +2,7 @@
 
 exports[`figureImage.js renders component 1`] = `
 <figure
-  className="sc-bdVaJa seFes"
+  className="sc-bdVaJa cjjZVF"
 >
   <img
     alt="An image."
@@ -14,7 +14,7 @@ exports[`figureImage.js renders component 1`] = `
 
 exports[`figureImage.js renders component 2`] = `
 <figure
-  className="sc-bdVaJa idiBhP"
+  className="sc-bdVaJa bKUyBu"
 >
   <img
     alt="An image."
@@ -31,7 +31,7 @@ exports[`figureImage.js renders component 2`] = `
 exports[`figureImage.js renders component 3`] = `
 Array [
   <figure
-    className="sc-bdVaJa iPfApA"
+    className="sc-bdVaJa dYrjtW"
   >
     <img
       alt="An image."

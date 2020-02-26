@@ -2,7 +2,7 @@
 
 exports[`figureImage.js renders component 1`] = `
 <button
-  className="sc-bwzfXH ixYnSQ"
+  className="sc-bwzfXH fBYzTV"
   onClick={[Function]}
   role="button"
 >
@@ -17,7 +17,7 @@ exports[`figureImage.js renders component 1`] = `
 
 exports[`figureImage.js renders component 2`] = `
 <button
-  className="sc-bwzfXH jgAzNz"
+  className="sc-bwzfXH ePwoXT"
   onClick={[Function]}
   role="button"
 >
