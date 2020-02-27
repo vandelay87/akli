@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 import MaterialButton from './materialButton';
 import { basicButton, raisedButton } from './materialButton.stories';
 
-describe('figureImage.js', () => {
+describe('materialButton.js', () => {
   it('renders component', () => {
     const basicButtonTree = renderer
       .create(basicButton())
@@ -22,6 +22,6 @@ describe('figureImage.js', () => {
     const wrapper = shallow(<MaterialButton value="click" click={mockFn} />);
 
     wrapper.simulate('click');
-    expect(mockFn).toHaveBeenCalled();
+    expect(mockFn).toHaveBeenCalledTimes(1);
   });
 });

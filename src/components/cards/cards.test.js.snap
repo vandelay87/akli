@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`cards.js renders component 1`] = `
+<section
+  className="sc-EHOje gAclcb"
+>
+  <article
+    className="sc-bZQynM eNDIQz"
+  >
+    <div
+      className="sc-gzVnrw cjWtXy"
+    >
+      <h2
+        className="sc-bdVaJa kAaGL"
+        size={2}
+      >
+        Lorem Ipsum
+      </h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+    </div>
+  </article>
+</section>
+`;
+
+exports[`cards.js renders component 2`] = `
+<section
+  className="sc-EHOje gAclcb"
+>
+  <article
+    className="sc-bZQynM eNDIQz"
+  >
+    <div
+      className="sc-gzVnrw cjWtXy"
+    >
+      <h2
+        className="sc-bdVaJa kAaGL"
+        size={2}
+      >
+        Lorem Ipsum
+      </h2>
+      <h3
+        className="sc-bdVaJa bOQwgh"
+        size={3}
+      >
+        Duis aute irure
+      </h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+    </div>
+  </article>
+</section>
+`;
+
+exports[`cards.js renders component 3`] = `
+<section
+  className="sc-EHOje gAclcb"
+>
+  <article
+    className="sc-bZQynM eNDIQz"
+  >
+    <figure
+      className="sc-bwzfXH fxNzYw"
+    >
+      <img
+        src="https://via.placeholder.com/400x200"
+      />
+      
+    </figure>
+    <div
+      className="sc-gzVnrw cjWtXy"
+    >
+      <h2
+        className="sc-bdVaJa kAaGL"
+        size={2}
+      >
+        Facebook
+      </h2>
+      <h3
+        className="sc-bdVaJa bOQwgh"
+        size={3}
+      >
+        email@facebook.com
+      </h3>
+      <p>
+        Connect with friends, family and other people you know. Share photos and videos, send messages and get updates.
+      </p>
+    </div>
+  </article>
+  <article
+    className="sc-bZQynM eNDIQz"
+  >
+    <figure
+      className="sc-bwzfXH fxNzYw"
+    >
+      <img
+        src="https://via.placeholder.com/400x200"
+      />
+      
+    </figure>
+    <div
+      className="sc-gzVnrw cjWtXy"
+    >
+      <h2
+        className="sc-bdVaJa kAaGL"
+        size={2}
+      >
+        Twitter
+      </h2>
+      <h3
+        className="sc-bdVaJa bOQwgh"
+        size={3}
+      >
+        email@twitter.com
+      </h3>
+      <p>
+        See what is happening in the world right now. Join Twitter today. Sign up Log In.
+      </p>
+    </div>
+  </article>
+  <article
+    className="sc-bZQynM eNDIQz"
+  >
+    <figure
+      className="sc-bwzfXH fxNzYw"
+    >
+      <img
+        src="https://via.placeholder.com/400x200"
+      />
+      
+    </figure>
+    <div
+      className="sc-gzVnrw cjWtXy"
+    >
+      <h2
+        className="sc-bdVaJa kAaGL"
+        size={2}
+      >
+        LinkedIn
+      </h2>
+      <h3
+        className="sc-bdVaJa bOQwgh"
+        size={3}
+      >
+        email@linkedin.com
+      </h3>
+      <p>
+        Manage your professional identity. Build and engage with your professional network. Access knowledge, insights and opportunities.
+      </p>
+    </div>
+  </article>
+</section>
+`;
+
+exports[`cards.js renders component 4`] = `
+<section
+  className="sc-EHOje gAclcb"
+>
+  <article
+    className="sc-bZQynM eNDIQz"
+  >
+    <div
+      className="sc-gzVnrw cjWtXy"
+    >
+      <h2
+        className="sc-bdVaJa kAaGL"
+        size={2}
+      >
+        Lorem Ipsum
+      </h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+    </div>
+    <button
+      className="sc-ifAKCX iDDfHH"
+      onClick={[Function]}
+      role="button"
+    >
+      View
+      <div
+        className="sc-bxivhb kyOqOf"
+        color="#1976d2"
+        onMouseDown={[Function]}
+      />
+    </button>
+  </article>
+</section>
+`;

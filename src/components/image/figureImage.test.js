@@ -3,25 +3,7 @@ import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
 import FigureImage from './figureImage';
 import { imageWithoutCaption, imageWithCaption, imageWithContent } from './figureImage.stories';
-
-const fluidShapeMock = {
-  file: {
-    url: 'https://via.placeholder.com/400x225',
-    details: {
-      image: {
-        width: 400,
-        height: 225
-      }
-    }
-  },
-  fluid: {
-    aspectRatio: 1.5,
-    src: `test_image.jpg`,
-    srcSet: `some srcSet`,
-    sizes: `(max-width: 600px) 100vw, 600px`,
-  },
-  description: 'An image.'
-}
+import { fluidImage } from '../../../__mocks__/figureImage-mock';
 
 describe('figureImage.js', () => {
   it('renders component', () => {
@@ -34,7 +16,7 @@ describe('figureImage.js', () => {
     const imageContentTree = renderer
       .create(imageWithContent())
       .toJSON();
-    const imageFluidTree = shallow(<FigureImage image={fluidShapeMock} />);
+    const imageFluidTree = shallow(<FigureImage image={fluidImage} />);
 
     expect(imageTree).toMatchSnapshot();
     expect(imageCaptionTree).toMatchSnapshot();

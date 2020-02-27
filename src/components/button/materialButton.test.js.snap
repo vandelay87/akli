@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`figureImage.js renders component 1`] = `
+exports[`materialButton.js renders component 1`] = `
 <button
   className="sc-bwzfXH fBYzTV"
   onClick={[Function]}
@@ -15,7 +15,7 @@ exports[`figureImage.js renders component 1`] = `
 </button>
 `;
 
-exports[`figureImage.js renders component 2`] = `
+exports[`materialButton.js renders component 2`] = `
 <button
   className="sc-bwzfXH ePwoXT"
   onClick={[Function]}
