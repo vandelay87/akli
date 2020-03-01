@@ -5,6 +5,7 @@ import ContentfulSection from '../layouts/sectionBlock';
 import ContentfulTable from '../components/table/dataTable';
 import ContentfulCards from '../components/cards/cards';
 import ContentfulFigureImage from '../components/image/figureImage';
+import ContentfulChips from '../components/chips/chips';
 
 const componentList = {
   ContentfulRichText,
@@ -14,6 +15,7 @@ const componentList = {
   ContentfulTable,
   ContentfulCards,
   ContentfulFigureImage,
+  ContentfulChips,
 };
 
 export default componentList;

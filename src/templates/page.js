@@ -65,6 +65,9 @@ export const query = graphql`
           ... on ContentfulFigureImage {
             ...Image
           }
+          ... on ContentfulChips {
+            ...Chips
+          }
         }
         ... on ContentfulSection {
           id
@@ -88,6 +91,9 @@ export const query = graphql`
               }
               ... on ContentfulFigureImage {
                 ...Image
+              }
+              ... on ContentfulChips {
+                ...Chips
               }
             }
           }

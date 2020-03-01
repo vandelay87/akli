@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`chips.js renders component 1`] = `
+<div
+  className="sc-bwzfXH gUUAHO"
+>
+  <div
+    className="sc-htpNat dyWzqD"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <span>
+      Small
+    </span>
+    <div
+      className="sc-bdVaJa esPUWU"
+      color="gray"
+      onMouseDown={[Function]}
+    />
+  </div>
+  <div
+    className="sc-htpNat dyWzqD"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <span>
+      Medium
+    </span>
+    <div
+      className="sc-bdVaJa esPUWU"
+      color="gray"
+      onMouseDown={[Function]}
+    />
+  </div>
+  <div
+    className="sc-htpNat dyWzqD"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <span>
+      Large
+    </span>
+    <div
+      className="sc-bdVaJa esPUWU"
+      color="gray"
+      onMouseDown={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`chips.js renders component 2`] = `
+<div
+  className="sc-bwzfXH gUUAHO"
+>
+  <div
+    className="sc-htpNat dyWzqD"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <span>
+      React.js
+    </span>
+    <div
+      className="sc-bdVaJa esPUWU"
+      color="gray"
+      onMouseDown={[Function]}
+    />
+  </div>
+  <div
+    className="sc-htpNat dyWzqD"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <span>
+      Vue
+    </span>
+    <div
+      className="sc-bdVaJa esPUWU"
+      color="gray"
+      onMouseDown={[Function]}
+    />
+  </div>
+  <div
+    className="sc-htpNat dyWzqD"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <span>
+      Angular
+    </span>
+    <div
+      className="sc-bdVaJa esPUWU"
+      color="gray"
+      onMouseDown={[Function]}
+    />
+  </div>
+  <div
+    className="sc-htpNat dyWzqD"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <span>
+      Gatsby
+    </span>
+    <div
+      className="sc-bdVaJa esPUWU"
+      color="gray"
+      onMouseDown={[Function]}
+    />
+  </div>
+</div>
+`;
