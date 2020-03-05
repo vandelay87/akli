@@ -8,8 +8,10 @@ const openLink = url => () => window.open(url);
 const handleChipKeyPress = event => action => {
   event.preventDefault();
   
-  return event.key === 'Enter' && typeof action === 'function' 
-    ? action() : openLink(action)()
+  return event.key === 'Enter' && (
+    typeof action === 'function' 
+      ? action() : openLink(action)()
+  );
 };
 
 const Chips = ({ list }) => (
