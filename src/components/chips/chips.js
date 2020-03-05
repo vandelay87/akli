@@ -5,10 +5,12 @@ import Ripple from '../../hooks/ripple';
 import { robotoRegular } from '../../styles/fonts';
 
 const openLink = url => () => window.open(url);
-const handleChipKeyPress = event => action => (
-  event.key === 'Enter' &&
-    typeof action === 'function' ? action() : openLink(action)()
-);
+const handleChipKeyPress = event => action => {
+  event.preventDefault();
+  
+  return event.key === 'Enter' && typeof action === 'function' 
+    ? action() : openLink(action)()
+};
 
 const Chips = ({ list }) => (
   <StyledWrapper>
