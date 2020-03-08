@@ -68,6 +68,9 @@ export const query = graphql`
           ... on ContentfulChips {
             ...Chips
           }
+          ... on ContentfulTabBar {
+            ...TabBar
+          }
         }
         ... on ContentfulSection {
           id
@@ -94,6 +97,9 @@ export const query = graphql`
               }
               ... on ContentfulChips {
                 ...Chips
+              }
+              ... on ContentfulTabBar {
+                ...TabBar
               }
             }
           }

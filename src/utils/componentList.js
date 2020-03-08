@@ -6,6 +6,7 @@ import ContentfulTable from '../components/table/dataTable';
 import ContentfulCards from '../components/cards/cards';
 import ContentfulFigureImage from '../components/image/figureImage';
 import ContentfulChips from '../components/chips/chips';
+import ContentfulTabBar from '../components/tabBar/tabBar';
 
 const componentList = {
   ContentfulRichText,
@@ -16,6 +17,7 @@ const componentList = {
   ContentfulCards,
   ContentfulFigureImage,
   ContentfulChips,
+  ContentfulTabBar
 };
 
 export default componentList;
