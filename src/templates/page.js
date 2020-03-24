@@ -68,8 +68,8 @@ export const query = graphql`
           ... on ContentfulChips {
             ...Chips
           }
-          ... on ContentfulTabBar {
-            ...TabBar
+          ... on ContentfulTabs {
+            ...Tabs
           }
         }
         ... on ContentfulSection {
@@ -98,8 +98,8 @@ export const query = graphql`
               ... on ContentfulChips {
                 ...Chips
               }
-              ... on ContentfulTabBar {
-                ...TabBar
+              ... on ContentfulTabs {
+                ...Tabs
               }
             }
           }

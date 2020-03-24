@@ -1,9 +1,10 @@
-import { graphql } from 'gatsby';
+import { graphql } from 'gatsby'
 
 export const query = graphql`
-  fragment TabBar on ContentfulTabBar {
+  fragment Tabs on ContentfulTabs {
     id
-    tabs {
+    label
+    tabList {
       id
       label
       content {
@@ -12,4 +13,4 @@ export const query = graphql`
       }
     }
   } 
-`;
+`
