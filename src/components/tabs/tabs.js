@@ -15,8 +15,14 @@ const Tabs = ({ label, tabList }) => {
     }))
   )
   const tabBarEl = useRef(null)
+  const didMount = useRef(false);
 
   useEffect(() => {
+    if (didMount.current) {
+      didMount.current = false
+      return
+    }
+
     const tabsEl = tabBarEl.current.children
     Object.keys(tabsEl).forEach(key => {
       tabsEl[key].attributes.tabIndex.value === '0' && tabsEl[key].focus()
@@ -39,18 +45,11 @@ const Tabs = ({ label, tabList }) => {
   )
 
   const handleTabKeyPress = (event, index) => {
-    if (event.key !== 'Tab') {
-      event.preventDefault();
-      
-      if (event.key === 'ArrowLeft') {
-        setFocusedTab(!index ? tabs.length - 1 : index - 1)
-      }
-      if (event.key === 'ArrowRight') {
-        setFocusedTab(index === tabs.length - 1 ? 0 : index + 1)
-      }
-      if (event.key === 'Enter') {
-        setSelectedTab(index)
-      }
+    if (event.key === 'ArrowLeft') {
+      setFocusedTab(!index ? tabs.length - 1 : index - 1)
+    }
+    if (event.key === 'ArrowRight') {
+      setFocusedTab(index === tabs.length - 1 ? 0 : index + 1)
     }
   }
 
