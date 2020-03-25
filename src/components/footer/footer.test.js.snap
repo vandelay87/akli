@@ -10,7 +10,7 @@ exports[`footer.js renders component 1`] = `
     <li>
       <a
         aria-current="page"
-        className="sc-bdVaJa inBooY"
+        className="sc-bdVaJa kuzore"
         href="/"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -21,7 +21,7 @@ exports[`footer.js renders component 1`] = `
     </li>
     <li>
       <a
-        className="sc-bdVaJa inBooY"
+        className="sc-bdVaJa kuzore"
         href="https://www.google.com"
         rel="noreferrer noopener"
         target="_blank"

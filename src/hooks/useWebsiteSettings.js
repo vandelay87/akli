@@ -1,4 +1,4 @@
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby'
 
 const useWebsiteSettings = () => {
   const { contentfulWebsiteSettings } = useStaticQuery(graphql`
@@ -8,9 +8,9 @@ const useWebsiteSettings = () => {
         ...Footer
       }
     }
-  `);
+  `)
 
-  return contentfulWebsiteSettings;
-};
+  return contentfulWebsiteSettings
+}
 
-export default useWebsiteSettings;
+export default useWebsiteSettings

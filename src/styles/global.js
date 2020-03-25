@@ -1,6 +1,6 @@
-import { createGlobalStyle } from 'styled-components';
-import normalize from './normalize';
-import { fontFaces, robotoRegular } from './fonts';
+import { createGlobalStyle } from 'styled-components'
+import normalize from './normalize'
+import { fontFaces, robotoRegular } from './fonts'
 
 const GlobalStyles = createGlobalStyle`
   ${fontFaces}
@@ -21,6 +21,6 @@ const GlobalStyles = createGlobalStyle`
       letter-spacing: .03125em;
     }
   }
-`;
+`
 
-export default GlobalStyles;
+export default GlobalStyles

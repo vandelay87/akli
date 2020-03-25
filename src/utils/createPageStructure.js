@@ -1,9 +1,9 @@
-exports.createPageStructure = (edges) => {
-  const pages = [];
+exports.createPageStructure = edges => {
+  const pages = []
 
   edges.forEach(({ node: { id, slug } }) => {
-    pages.push({ slug, id });
-  });
+    pages.push({ slug, id })
+  })
 
-  return pages;
-};
+  return pages
+}

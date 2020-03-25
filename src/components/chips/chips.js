@@ -1,27 +1,28 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import Ripple from '../../hooks/ripple';
-import { robotoRegular } from '../../styles/fonts';
+import React from 'react'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
+import Ripple from '../../hooks/ripple'
+import { robotoRegular } from '../../styles/fonts'
 
-const openLink = url => () => window.open(url);
+const openLink = url => () => window.open(url)
+
 const handleChipKeyPress = event => action => {
-  event.preventDefault();
-  
-  return event.key === 'Enter' && (
-    typeof action === 'function' 
-      ? action() : openLink(action)()
-  );
-};
+  event.preventDefault()
+
+  return (
+    event.key === 'Enter' &&
+    (typeof action === 'function' ? action() : openLink(action)())
+  )
+}
 
 const Chips = ({ list }) => (
   <StyledWrapper>
     {list.map(chip => (
-      <StyledChip 
-        role="button" 
-        tabIndex={0} 
+      <StyledChip
+        role="button"
+        tabIndex={0}
         onClick={chip.link ? openLink(chip.link) : chip.action}
-        onKeyPress={(e) => handleChipKeyPress(e)(chip.link || chip.action)}
+        onKeyPress={e => handleChipKeyPress(e)(chip.link || chip.action)}
         key={chip.id}
       >
         <span>{chip.value}</span>
@@ -29,13 +30,13 @@ const Chips = ({ list }) => (
       </StyledChip>
     ))}
   </StyledWrapper>
-);
+)
 
 const StyledWrapper = styled.div`
   display: inline-flex;
   flex-wrap: wrap;
   align-items: start;
-`;
+`
 const StyledChip = styled.div`
   flex: 0 1 auto;
   display: flex;
@@ -63,17 +64,19 @@ const StyledChip = styled.div`
     font-size: .875rem;
     line-height: 1.25rem;
     font-weight: 400;
-    letter-spacing: .0178571429em;
+    letter-spacing: 0.0178571429em;
   }
-`;
+`
 
 Chips.propTypes = {
-  list: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string,
-    value: PropTypes.string,
-    action: PropTypes.func,
-    link: PropTypes.string,
-  })).isRequired,
-};
+  list: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      value: PropTypes.string,
+      action: PropTypes.func,
+      link: PropTypes.string,
+    })
+  ).isRequired,
+}
 
-export default Chips;
+export default Chips

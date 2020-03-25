@@ -2,7 +2,7 @@
 
 exports[`dataTable.js renders component 1`] = `
 <div
-  className="sc-bdVaJa bbUuJY"
+  className="sc-bdVaJa giAdbL"
 >
   <table
     aria-label="Shop table"
@@ -10,7 +10,7 @@ exports[`dataTable.js renders component 1`] = `
     label="Shop table"
   >
     <thead
-      className="sc-htpNat faekKl"
+      className="sc-htpNat dZygAc"
     >
       <tr>
         <th
@@ -36,70 +36,70 @@ exports[`dataTable.js renders component 1`] = `
       </tr>
     </thead>
     <tbody
-      className="sc-bxivhb cvbOMu"
+      className="sc-bxivhb gdtFab"
     >
       <tr>
         <td
-          className="sc-ifAKCX hhgZUI"
+          className="sc-ifAKCX cqElAx"
         >
           Coffee
         </td>
         <td
-          className="sc-ifAKCX hhgZUI"
+          className="sc-ifAKCX cqElAx"
         >
           A nice cup of coffee. Hot!
         </td>
         <td
-          className="sc-ifAKCX jRedLd"
+          className="sc-ifAKCX gButAi"
         >
           £2.60
         </td>
         <td
-          className="sc-ifAKCX hhgZUI"
+          className="sc-ifAKCX cqElAx"
         >
           Yes
         </td>
       </tr>
       <tr>
         <td
-          className="sc-ifAKCX hhgZUI"
+          className="sc-ifAKCX cqElAx"
         >
           TV
         </td>
         <td
-          className="sc-ifAKCX hhgZUI"
+          className="sc-ifAKCX cqElAx"
         >
           42inch, 4k, widescreen television. Second hand.
         </td>
         <td
-          className="sc-ifAKCX jRedLd"
+          className="sc-ifAKCX gButAi"
         >
           £399
         </td>
         <td
-          className="sc-ifAKCX hhgZUI"
+          className="sc-ifAKCX cqElAx"
         >
           No
         </td>
       </tr>
       <tr>
         <td
-          className="sc-ifAKCX hhgZUI"
+          className="sc-ifAKCX cqElAx"
         >
           Electric guitar
         </td>
         <td
-          className="sc-ifAKCX hhgZUI"
+          className="sc-ifAKCX cqElAx"
         >
           Limited edition electric guitar. Poor condition. Strings need to be changed.
         </td>
         <td
-          className="sc-ifAKCX jRedLd"
+          className="sc-ifAKCX gButAi"
         >
           £260
         </td>
         <td
-          className="sc-ifAKCX hhgZUI"
+          className="sc-ifAKCX cqElAx"
         >
           Yes
         </td>

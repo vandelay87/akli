@@ -3,4 +3,4 @@ export const color = {
   onPrimary: '#ffffff',
   secondary: '#373737',
   onSecondary: '#ffffff',
-};
+}

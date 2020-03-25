@@ -17,7 +17,7 @@ export const header = {
       value: 'In stock',
     },
   ],
-};
+}
 
 export const rows = [
   {
@@ -73,7 +73,8 @@ export const rows = [
       },
       {
         id: 'guitarDescription',
-        value: 'Limited edition electric guitar. Poor condition. Strings need to be changed.',
+        value:
+          'Limited edition electric guitar. Poor condition. Strings need to be changed.',
       },
       {
         isNumeric: true,
@@ -85,5 +86,5 @@ export const rows = [
         value: 'Yes',
       },
     ],
-  }
-];
+  },
+]

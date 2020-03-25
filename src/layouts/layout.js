@@ -1,13 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import GlobalStyles from '../styles/global';
-import useWebsiteSettings from '../hooks/useWebsiteSettings';
-import Header from '../components/header/header';
-import Footer from '../components/footer/footer';
+import React from 'react'
+import PropTypes from 'prop-types'
+import GlobalStyles from '../styles/global'
+import useWebsiteSettings from '../hooks/useWebsiteSettings'
+import Header from '../components/header/header'
+import Footer from '../components/footer/footer'
 
 const Layout = ({ children }) => {
-  const { title } = useWebsiteSettings().header;
-  const { navigation } = useWebsiteSettings().footer;
+  const { title } = useWebsiteSettings().header
+  const { navigation } = useWebsiteSettings().footer
 
   return (
     <>
@@ -25,11 +25,11 @@ const Layout = ({ children }) => {
       </div>
       <Footer navigation={navigation} />
     </>
-  );
-};
+  )
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-};
+}
 
-export default Layout;
+export default Layout

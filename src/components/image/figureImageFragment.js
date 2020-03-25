@@ -1,4 +1,4 @@
-import { graphql } from 'gatsby';
+import { graphql } from 'gatsby'
 
 export const query = graphql`
   fragment Image on ContentfulFigureImage {
@@ -28,4 +28,4 @@ export const query = graphql`
     caption
     align
   }
-`;
+`

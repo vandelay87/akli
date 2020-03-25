@@ -1,16 +1,22 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link as GatsbyLink } from 'gatsby';
-import styled from 'styled-components';
-import { robotoRegular } from '../../styles/fonts';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Link as GatsbyLink } from 'gatsby'
+import styled from 'styled-components'
+import { robotoRegular } from '../../styles/fonts'
 
 const LinkCTA = ({ title, link, external }) => (
   <>
-    {external
-      ? <StyledLink href={link} target="_blank" rel="noreferrer noopener">{title}</StyledLink>
-      : <StyledLink as={GatsbyLink} to={link}>{title}</StyledLink>}
+    {external ? (
+      <StyledLink href={link} target="_blank" rel="noreferrer noopener">
+        {title}
+      </StyledLink>
+    ) : (
+      <StyledLink as={GatsbyLink} to={link}>
+        {title}
+      </StyledLink>
+    )}
   </>
-);
+)
 
 const StyledLink = styled('a')`
   ${robotoRegular}
@@ -19,17 +25,16 @@ const StyledLink = styled('a')`
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 400;
-  letter-spacing: .03125em;
-`;
+  letter-spacing: 0.03125em;
+`
 
 LinkCTA.propTypes = {
   title: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
   external: PropTypes.bool,
-};
-
+}
 LinkCTA.defaultProps = {
   external: false,
-};
+}
 
-export default LinkCTA;
+export default LinkCTA

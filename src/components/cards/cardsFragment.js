@@ -1,9 +1,9 @@
-import { graphql } from 'gatsby';
+import { graphql } from 'gatsby'
 
 export const query = graphql`
   fragment Cards on ContentfulCards {
     id
-    list {
+    cardList {
       id
       title
       subtitle
@@ -17,4 +17,4 @@ export const query = graphql`
       category
     }
   }
-`;
+`

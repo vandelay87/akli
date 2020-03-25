@@ -1,8 +1,8 @@
-const path = require('path');
-const { createPageStructure } = require('./src/utils/createPageStructure');
+const path = require('path')
+const { createPageStructure } = require('./src/utils/createPageStructure')
 
 exports.createPages = ({ graphql, actions }) => {
-  const pageTemplate = path.resolve('src/templates/page.js');
+  const pageTemplate = path.resolve('src/templates/page.js')
 
   return graphql(`
     {
@@ -15,20 +15,20 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     }
-  `).then((result) => {
+  `).then(result => {
     if (result.errors) {
-      throw result.errors;
+      throw result.errors
     }
 
-    const pages = createPageStructure(result.data.allContentfulPage.edges);
-    pages.forEach((page) => {
+    const pages = createPageStructure(result.data.allContentfulPage.edges)
+    pages.forEach(page => {
       actions.createPage({
         path: page.slug,
         component: pageTemplate,
         context: {
           id: page.id,
         },
-      });
-    });
-  });
-};
+      })
+    })
+  })
+}

@@ -2,7 +2,7 @@
 
 exports[`figureImage.js renders component 1`] = `
 <figure
-  className="sc-bdVaJa cjjZVF"
+  className="sc-bdVaJa eBLmmi"
 >
   <img
     alt="An image."
@@ -14,14 +14,14 @@ exports[`figureImage.js renders component 1`] = `
 
 exports[`figureImage.js renders component 2`] = `
 <figure
-  className="sc-bdVaJa bKUyBu"
+  className="sc-bdVaJa NZrAd"
 >
   <img
     alt="An image."
     src="https://via.placeholder.com/400x225"
   />
   <figcaption
-    className="sc-bwzfXH gCoeoF"
+    className="sc-bwzfXH kmIjOW"
   >
     A witty anecdote concerning the crocodile in the image above.
   </figcaption>
@@ -31,7 +31,7 @@ exports[`figureImage.js renders component 2`] = `
 exports[`figureImage.js renders component 3`] = `
 Array [
   <figure
-    className="sc-bdVaJa dYrjtW"
+    className="sc-bdVaJa buKgEY"
   >
     <img
       alt="An image."

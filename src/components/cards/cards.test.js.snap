@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`cards.js renders component 1`] = `
-<section
+<div
   className="sc-EHOje gAclcb"
 >
   <article
-    className="sc-bZQynM eNDIQz"
+    className="sc-bZQynM eKUKWx"
   >
     <div
-      className="sc-gzVnrw cjWtXy"
+      className="sc-gzVnrw jIssoY"
     >
       <h2
         className="sc-bdVaJa kAaGL"
@@ -21,18 +21,18 @@ exports[`cards.js renders component 1`] = `
       </p>
     </div>
   </article>
-</section>
+</div>
 `;
 
 exports[`cards.js renders component 2`] = `
-<section
+<div
   className="sc-EHOje gAclcb"
 >
   <article
-    className="sc-bZQynM eNDIQz"
+    className="sc-bZQynM eKUKWx"
   >
     <div
-      className="sc-gzVnrw cjWtXy"
+      className="sc-gzVnrw jIssoY"
     >
       <h2
         className="sc-bdVaJa kAaGL"
@@ -51,18 +51,18 @@ exports[`cards.js renders component 2`] = `
       </p>
     </div>
   </article>
-</section>
+</div>
 `;
 
 exports[`cards.js renders component 3`] = `
-<section
+<div
   className="sc-EHOje gAclcb"
 >
   <article
-    className="sc-bZQynM eNDIQz"
+    className="sc-bZQynM eKUKWx"
   >
     <figure
-      className="sc-bwzfXH fxNzYw"
+      className="sc-bwzfXH cmJVxu"
     >
       <img
         src="https://via.placeholder.com/400x200"
@@ -70,7 +70,7 @@ exports[`cards.js renders component 3`] = `
       
     </figure>
     <div
-      className="sc-gzVnrw cjWtXy"
+      className="sc-gzVnrw jIssoY"
     >
       <h2
         className="sc-bdVaJa kAaGL"
@@ -90,10 +90,10 @@ exports[`cards.js renders component 3`] = `
     </div>
   </article>
   <article
-    className="sc-bZQynM eNDIQz"
+    className="sc-bZQynM eKUKWx"
   >
     <figure
-      className="sc-bwzfXH fxNzYw"
+      className="sc-bwzfXH cmJVxu"
     >
       <img
         src="https://via.placeholder.com/400x200"
@@ -101,7 +101,7 @@ exports[`cards.js renders component 3`] = `
       
     </figure>
     <div
-      className="sc-gzVnrw cjWtXy"
+      className="sc-gzVnrw jIssoY"
     >
       <h2
         className="sc-bdVaJa kAaGL"
@@ -121,10 +121,10 @@ exports[`cards.js renders component 3`] = `
     </div>
   </article>
   <article
-    className="sc-bZQynM eNDIQz"
+    className="sc-bZQynM eKUKWx"
   >
     <figure
-      className="sc-bwzfXH fxNzYw"
+      className="sc-bwzfXH cmJVxu"
     >
       <img
         src="https://via.placeholder.com/400x200"
@@ -132,7 +132,7 @@ exports[`cards.js renders component 3`] = `
       
     </figure>
     <div
-      className="sc-gzVnrw cjWtXy"
+      className="sc-gzVnrw jIssoY"
     >
       <h2
         className="sc-bdVaJa kAaGL"
@@ -151,18 +151,18 @@ exports[`cards.js renders component 3`] = `
       </p>
     </div>
   </article>
-</section>
+</div>
 `;
 
 exports[`cards.js renders component 4`] = `
-<section
+<div
   className="sc-EHOje gAclcb"
 >
   <article
-    className="sc-bZQynM eNDIQz"
+    className="sc-bZQynM eKUKWx"
   >
     <div
-      className="sc-gzVnrw cjWtXy"
+      className="sc-gzVnrw jIssoY"
     >
       <h2
         className="sc-bdVaJa kAaGL"
@@ -175,7 +175,7 @@ exports[`cards.js renders component 4`] = `
       </p>
     </div>
     <button
-      className="sc-ifAKCX iDDfHH"
+      className="sc-ifAKCX bRkpKd"
       onClick={[Function]}
       role="button"
     >
@@ -187,5 +187,5 @@ exports[`cards.js renders component 4`] = `
       />
     </button>
   </article>
-</section>
+</div>
 `;

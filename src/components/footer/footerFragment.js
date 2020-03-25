@@ -1,11 +1,11 @@
-import { graphql } from 'gatsby';
+import { graphql } from 'gatsby'
 
 export const query = graphql`
   fragment Footer on ContentfulWebsiteSettings {
-      footer{
-        navigation {
-            ...Link
-        }
+    footer {
+      navigation {
+        ...Link
       }
+    }
   }
-`;
+`

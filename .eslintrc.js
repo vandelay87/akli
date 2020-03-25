@@ -4,11 +4,7 @@ module.exports = {
     es6: true,
     jest: true,
   },
-  extends: [
-    'plugin:react/recommended',
-    'airbnb',
-    'prettier'
-  ],
+  extends: ['plugin:react/recommended', 'airbnb', 'prettier'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -20,18 +16,20 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-  ],
+  plugins: ['react', 'prettier'],
   rules: {
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "import/no-extraneous-dependencies": [
-      "error",
+    'prettier/prettier': 'error',
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'import/no-extraneous-dependencies': [
+      'error',
       {
-        "devDependencies": ["**/*.stories.js", "**/*.test.js"]
-      }
+        devDependencies: ['**/*.stories.js', '**/*.test.js'],
+      },
     ],
-    "react/jsx-props-no-spreading": 0,
-    "indent": ["error", 2],
+    'react/jsx-props-no-spreading': 0,
+    indent: ['error', 2],
+    semi: ['error', 'never'],
+    'max-len': ['error', { code: 80, tabWidth: 2 }],
+    'import/prefer-default-export': 'off',
   },
-};
+}

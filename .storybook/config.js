@@ -1,30 +1,30 @@
 import React from 'react'
-import { configure, addDecorator } from '@storybook/react';
-import { withKnobs } from "@storybook/addon-knobs";
-import { withA11y } from '@storybook/addon-a11y';
-import GlobalStyles from '../src/styles/global';
+import { configure, addDecorator } from '@storybook/react'
+import { withKnobs } from '@storybook/addon-knobs'
+import { withA11y } from '@storybook/addon-a11y'
+import GlobalStyles from '../src/styles/global'
 
 addDecorator(story => (
   <>
     <GlobalStyles />
     {story()}
   </>
-));
-addDecorator(withKnobs);
-addDecorator(withA11y);
+))
+addDecorator(withKnobs)
+addDecorator(withA11y)
 
 // automatically import all files ending in *.stories.js
-configure(require.context('../src/components', true, /\.stories\.js$/), module);
+configure(require.context('../src/components', true, /\.stories\.js$/), module)
 
 // Gatsby's Link overrides:
 // Gatsby defines a global called ___loader to prevent its method calls from creating console errors you override it here
 global.___loader = {
-  enqueue: () => { },
-  hovering: () => { },
+  enqueue: () => {},
+  hovering: () => {},
 }
 // Gatsby internal mocking to prevent unnecessary errors in storybook testing environment
-global.__PATH_PREFIX__ = ""
+global.__PATH_PREFIX__ = ''
 // This is to utilized to override the window.___navigate method Gatsby defines and uses to report what path a Link would be taking us to if it wasn't inside a storybook
 window.___navigate = pathname => {
-  action("NavigateTo:")(pathname)
+  action('NavigateTo:')(pathname)
 }

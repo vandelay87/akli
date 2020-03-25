@@ -1,4 +1,4 @@
-import { graphql } from 'gatsby';
+import { graphql } from 'gatsby'
 
 export const query = graphql`
   fragment Chips on ContentfulChips {
@@ -8,5 +8,5 @@ export const query = graphql`
       value
       link
     }
-  } 
-`;
+  }
+`

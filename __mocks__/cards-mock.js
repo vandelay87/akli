@@ -2,18 +2,20 @@ export const cardMock = [
   {
     id: '1',
     title: 'Lorem Ipsum',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-  }
-];
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  },
+]
 
 export const cardWithSubtitleMock = [
   {
     id: '1',
     title: 'Lorem Ipsum',
     subtitle: 'Duis aute irure',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-  }
-];
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  },
+]
 
 export const cardsWithImageMock = [
   {
@@ -23,9 +25,10 @@ export const cardsWithImageMock = [
     image: {
       file: {
         url: 'https://via.placeholder.com/400x200',
-      }
+      },
     },
-    description: 'Connect with friends, family and other people you know. Share photos and videos, send messages and get updates.',
+    description:
+      'Connect with friends, family and other people you know. Share photos and videos, send messages and get updates.',
   },
   {
     id: '2',
@@ -34,9 +37,10 @@ export const cardsWithImageMock = [
     image: {
       file: {
         url: 'https://via.placeholder.com/400x200',
-      }
+      },
     },
-    description: 'See what is happening in the world right now. Join Twitter today. Sign up Log In.',
+    description:
+      'See what is happening in the world right now. Join Twitter today. Sign up Log In.',
   },
   {
     id: '3',
@@ -45,17 +49,19 @@ export const cardsWithImageMock = [
     image: {
       file: {
         url: 'https://via.placeholder.com/400x200',
-      }
+      },
     },
-    description: 'Manage your professional identity. Build and engage with your professional network. Access knowledge, insights and opportunities.',
+    description:
+      'Manage your professional identity. Build and engage with your professional network. Access knowledge, insights and opportunities.',
   },
-];
+]
 
 export const cardWithLinkMock = [
   {
     id: '1',
     title: 'Lorem Ipsum',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     link: 'https://www.google.co.uk/',
-  }
+  },
 ]

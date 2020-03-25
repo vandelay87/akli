@@ -1,21 +1,23 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { action } from '@storybook/addon-actions';
+import { action } from '@storybook/addon-actions'
 
 export const chipsWithActionMock = [
   {
     id: '1',
     value: 'Small',
     action: action('small-click'),
-  },{
+  },
+  {
     id: '2',
     value: 'Medium',
     action: action('medium-click'),
-  },{
+  },
+  {
     id: '3',
     value: 'Large',
     action: action('large-click'),
-  }
-];
+  },
+]
 
 export const chipsWithLinkMock = [
   {
@@ -37,5 +39,5 @@ export const chipsWithLinkMock = [
     id: '4',
     value: 'Gatsby',
     link: 'https://www.gatsbyjs.org/',
-  }
-];
+  },
+]

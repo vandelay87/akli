@@ -12,5 +12,5 @@ export const query = graphql`
         json
       }
     }
-  } 
+  }
 `

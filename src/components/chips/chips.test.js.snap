@@ -5,7 +5,7 @@ exports[`chips.js renders component 1`] = `
   className="sc-bwzfXH gUUAHO"
 >
   <div
-    className="sc-htpNat dyWzqD"
+    className="sc-htpNat joubtX"
     onClick={[Function]}
     onKeyPress={[Function]}
     role="button"
@@ -21,7 +21,7 @@ exports[`chips.js renders component 1`] = `
     />
   </div>
   <div
-    className="sc-htpNat dyWzqD"
+    className="sc-htpNat joubtX"
     onClick={[Function]}
     onKeyPress={[Function]}
     role="button"
@@ -37,7 +37,7 @@ exports[`chips.js renders component 1`] = `
     />
   </div>
   <div
-    className="sc-htpNat dyWzqD"
+    className="sc-htpNat joubtX"
     onClick={[Function]}
     onKeyPress={[Function]}
     role="button"
@@ -60,7 +60,7 @@ exports[`chips.js renders component 2`] = `
   className="sc-bwzfXH gUUAHO"
 >
   <div
-    className="sc-htpNat dyWzqD"
+    className="sc-htpNat joubtX"
     onClick={[Function]}
     onKeyPress={[Function]}
     role="button"
@@ -76,7 +76,7 @@ exports[`chips.js renders component 2`] = `
     />
   </div>
   <div
-    className="sc-htpNat dyWzqD"
+    className="sc-htpNat joubtX"
     onClick={[Function]}
     onKeyPress={[Function]}
     role="button"
@@ -92,7 +92,7 @@ exports[`chips.js renders component 2`] = `
     />
   </div>
   <div
-    className="sc-htpNat dyWzqD"
+    className="sc-htpNat joubtX"
     onClick={[Function]}
     onKeyPress={[Function]}
     role="button"
@@ -108,7 +108,7 @@ exports[`chips.js renders component 2`] = `
     />
   </div>
   <div
-    className="sc-htpNat dyWzqD"
+    className="sc-htpNat joubtX"
     onClick={[Function]}
     onKeyPress={[Function]}
     role="button"

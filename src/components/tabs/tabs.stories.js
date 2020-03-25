@@ -15,12 +15,20 @@ export const basicTabBar = () => {
       label: 'tab 1',
       content: {
         id: 'c1',
-        json: {content: [{content: [{
-          marks: [],
-          value: 'Tab 1 content',
-          nodeType: 'text',
-        }],
-        nodeType: 'heading-2',}]},
+        json: {
+          content: [
+            {
+              content: [
+                {
+                  marks: [],
+                  value: 'Tab 1 content',
+                  nodeType: 'text',
+                },
+              ],
+              nodeType: 'heading-2',
+            },
+          ],
+        },
       },
     },
     {
@@ -28,15 +36,29 @@ export const basicTabBar = () => {
       label: 'tab 2',
       content: {
         id: 'c2',
-        json: {content: [{content: [{
-          marks: [],
-          value: 'Tab 2 content',
-          nodeType: 'text',
-        }],
-        nodeType: 'heading-2',}]},
+        json: {
+          content: [
+            {
+              content: [
+                {
+                  marks: [],
+                  value: 'Tab 2 content',
+                  nodeType: 'text',
+                },
+              ],
+              nodeType: 'heading-2',
+            },
+          ],
+        },
       },
     },
   ]
 
-  return <div style={{border: '1px solid black', maxWidth: '500px', margin: 'auto'}}><Tabs label="tabs" tabList={knob} /></div>
+  return (
+    <div
+      style={{ border: '1px solid black', maxWidth: '500px', margin: 'auto' }}
+    >
+      <Tabs label="tabs" tabList={knob} />
+    </div>
+  )
 }

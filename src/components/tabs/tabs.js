@@ -10,12 +10,12 @@ const Tabs = ({ label, tabList }) => {
   const [tabs, setTabs] = useState(
     tabList.map((tab, index) => ({
       ...tab,
-      selected: index ? false : true,
-      focused: index ? false : true,
+      selected: !index,
+      focused: !index,
     }))
   )
   const tabBarEl = useRef(null)
-  const didMount = useRef(false);
+  const didMount = useRef(false)
 
   useEffect(() => {
     if (didMount.current) {
@@ -28,21 +28,23 @@ const Tabs = ({ label, tabList }) => {
       tabsEl[key].attributes.tabIndex.value === '0' && tabsEl[key].focus()
     })
   }, [tabs])
-  
-  const setSelectedTab = selectedTab => (
-    setTabs(tabs.map((tab, index) => ({
-      ...tab,
-      selected: selectedTab === index,
-      focused: selectedTab === index,
-    })))
-  )
 
-  const setFocusedTab = focusedTab => (
-    setTabs(tabs.map((tab, index) => ({
-      ...tab,
-      focused: focusedTab === index,
-    })))
-  )
+  const setSelectedTab = selectedTab =>
+    setTabs(
+      tabs.map((tab, index) => ({
+        ...tab,
+        selected: selectedTab === index,
+        focused: selectedTab === index,
+      }))
+    )
+
+  const setFocusedTab = focusedTab =>
+    setTabs(
+      tabs.map((tab, index) => ({
+        ...tab,
+        focused: focusedTab === index,
+      }))
+    )
 
   const handleTabKeyPress = (event, index) => {
     if (event.key === 'ArrowLeft') {

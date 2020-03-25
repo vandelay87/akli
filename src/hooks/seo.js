@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
 
 const SEO = ({ title, description, lang }) => (
   <Helmet
@@ -27,17 +27,16 @@ const SEO = ({ title, description, lang }) => (
       },
     ]}
   />
-);
+)
 
 SEO.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
   lang: PropTypes.string,
-};
-
+}
 SEO.defaultProps = {
   description: '',
   lang: process.env.AKLIAISSAT_CONTENTFUL_LOCALE || 'en-GB',
-};
+}
 
-export default SEO;
+export default SEO

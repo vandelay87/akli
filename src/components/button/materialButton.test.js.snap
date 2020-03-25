@@ -2,7 +2,7 @@
 
 exports[`materialButton.js renders component 1`] = `
 <button
-  className="sc-bwzfXH fBYzTV"
+  className="sc-bwzfXH bvciCS"
   onClick={[Function]}
   role="button"
 >
@@ -17,7 +17,7 @@ exports[`materialButton.js renders component 1`] = `
 
 exports[`materialButton.js renders component 2`] = `
 <button
-  className="sc-bwzfXH ePwoXT"
+  className="sc-bwzfXH dhEIgu"
   onClick={[Function]}
   role="button"
 >
