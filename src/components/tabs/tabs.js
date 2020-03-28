@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useLayoutEffect } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { applyStyleModifiers } from 'styled-components-modifiers'
@@ -17,9 +17,9 @@ const Tabs = ({ label, tabList }) => {
   const tabBarEl = useRef(null)
   const didMount = useRef(false)
 
-  useEffect(() => {
-    if (didMount.current) {
-      didMount.current = false
+  useLayoutEffect(() => {
+    if (!didMount.current) {
+      didMount.current = true
       return
     }
 
@@ -83,7 +83,7 @@ const Tabs = ({ label, tabList }) => {
           aria-labelledby={tab.id}
           key={tab.content.id}
         >
-          <RichText article={tab.content} />
+          <RichText content={tab.content} />
         </StyledTabPanel>
       ))}
     </StyledWrapper>
@@ -100,7 +100,7 @@ const TABPANEL_CONFIG = {
     display: block;
   `,
 }
-const StyledWrapper = styled.div`
+const StyledWrapper = styled.article`
   ${robotoRegular}
   margin: 1em auto;
 `

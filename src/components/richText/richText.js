@@ -4,11 +4,11 @@ import styled from 'styled-components'
 import richTextRenderer from '../../utils/richTextRenderer'
 import { robotoRegular } from '../../styles/fonts'
 
-const RichText = ({ article }) => (
-  <StyledRichText>{richTextRenderer(article.json)}</StyledRichText>
+const RichText = ({ content }) => (
+  <StyledRichText>{richTextRenderer(content.json)}</StyledRichText>
 )
 
-const StyledRichText = styled.article`
+const StyledRichText = styled.div`
   ${robotoRegular}
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -19,7 +19,7 @@ const StyledRichText = styled.article`
 `
 
 RichText.propTypes = {
-  article: PropTypes.shape({
+  content: PropTypes.shape({
     json: PropTypes.shape.isRequired,
   }).isRequired,
 }

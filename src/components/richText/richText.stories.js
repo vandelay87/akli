@@ -9,7 +9,7 @@ export default {
 }
 
 export const article = () => {
-  const knob = object('Article', richTextMock)
+  const knob = object('Content', richTextMock)
 
-  return <RichText article={knob} />
+  return <RichText content={knob} />
 }
