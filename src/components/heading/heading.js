@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { robotoRegular } from '../../styles/fonts'
+import { below } from '../../styles/breakpoints'
 
 const Heading = ({ title, size, align }) => (
   <StyledHeading as={`h${size}`} align={align} size={size}>
@@ -30,6 +31,21 @@ const StyledHeading = styled.h1`
   line-height: ${props => lineHeight[props.size - 1]};
   letter-spacing: ${props => letterSpacing[props.size - 1]};
   text-align: ${props => props.align};
+  
+  ${props =>
+    props.size === 1 &&
+    css`
+      ${below.mobile`
+        font-size: 4.5rem;
+        line-height: 4.5rem;
+        letter-spacing: -0.0083333333em;
+        word-break: break-word;
+      `}
+
+      ${below.smallMobile`
+        font-size: 3.75rem;
+      `}
+    `}
 `
 
 Heading.propTypes = {

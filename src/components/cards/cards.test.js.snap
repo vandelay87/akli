@@ -11,7 +11,7 @@ exports[`cards.js renders component 1`] = `
       className="sc-gzVnrw jIssoY"
     >
       <h2
-        className="sc-bdVaJa kAaGL"
+        className="sc-bdVaJa kXwlKd"
         size={2}
       >
         Lorem Ipsum
@@ -35,13 +35,13 @@ exports[`cards.js renders component 2`] = `
       className="sc-gzVnrw jIssoY"
     >
       <h2
-        className="sc-bdVaJa kAaGL"
+        className="sc-bdVaJa kXwlKd"
         size={2}
       >
         Lorem Ipsum
       </h2>
       <h3
-        className="sc-bdVaJa bOQwgh"
+        className="sc-bdVaJa gXEBbW"
         size={3}
       >
         Duis aute irure
@@ -73,13 +73,13 @@ exports[`cards.js renders component 3`] = `
       className="sc-gzVnrw jIssoY"
     >
       <h2
-        className="sc-bdVaJa kAaGL"
+        className="sc-bdVaJa kXwlKd"
         size={2}
       >
         Facebook
       </h2>
       <h3
-        className="sc-bdVaJa bOQwgh"
+        className="sc-bdVaJa gXEBbW"
         size={3}
       >
         email@facebook.com
@@ -104,13 +104,13 @@ exports[`cards.js renders component 3`] = `
       className="sc-gzVnrw jIssoY"
     >
       <h2
-        className="sc-bdVaJa kAaGL"
+        className="sc-bdVaJa kXwlKd"
         size={2}
       >
         Twitter
       </h2>
       <h3
-        className="sc-bdVaJa bOQwgh"
+        className="sc-bdVaJa gXEBbW"
         size={3}
       >
         email@twitter.com
@@ -135,13 +135,13 @@ exports[`cards.js renders component 3`] = `
       className="sc-gzVnrw jIssoY"
     >
       <h2
-        className="sc-bdVaJa kAaGL"
+        className="sc-bdVaJa kXwlKd"
         size={2}
       >
         LinkedIn
       </h2>
       <h3
-        className="sc-bdVaJa bOQwgh"
+        className="sc-bdVaJa gXEBbW"
         size={3}
       >
         email@linkedin.com
@@ -165,7 +165,7 @@ exports[`cards.js renders component 4`] = `
       className="sc-gzVnrw jIssoY"
     >
       <h2
-        className="sc-bdVaJa kAaGL"
+        className="sc-bdVaJa kXwlKd"
         size={2}
       >
         Lorem Ipsum
