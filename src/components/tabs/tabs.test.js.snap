@@ -3,16 +3,16 @@
 exports[`tabs.js renders component 1`] = `
 <article
   aria-label="tabs"
-  className="sc-VigVT eWoHmX"
+  className="sc-fjdhpX iJpMF"
 >
   <div
-    className="sc-jTzLTM dujGFv"
+    className="sc-jzJRlG jKlxES"
     role="tablist"
   >
     <button
       aria-controls="c1"
       aria-selected={true}
-      className="sc-fjdhpX iVWRpn"
+      className="sc-bdVaJa hktHNt"
       id="1"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -22,13 +22,13 @@ exports[`tabs.js renders component 1`] = `
     >
       tab 1
       <span
-        className="sc-jzJRlG beOPzv"
+        className="sc-bwzfXH cSoCyb"
       />
     </button>
     <button
       aria-controls="c2"
       aria-selected={false}
-      className="sc-fjdhpX cdsgbw"
+      className="sc-bdVaJa ezQdLR"
       id="2"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -38,13 +38,13 @@ exports[`tabs.js renders component 1`] = `
     >
       tab 2
       <span
-        className="sc-jzJRlG fvvWqu"
+        className="sc-bwzfXH kkjYom"
       />
     </button>
     <button
       aria-controls="c3"
       aria-selected={false}
-      className="sc-fjdhpX cdsgbw"
+      className="sc-bdVaJa ezQdLR"
       id="3"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -54,7 +54,7 @@ exports[`tabs.js renders component 1`] = `
     >
       tab 3
       <span
-        className="sc-jzJRlG fvvWqu"
+        className="sc-bwzfXH kkjYom"
       />
     </button>
   </div>
@@ -66,10 +66,10 @@ exports[`tabs.js renders component 1`] = `
     role="tabpanel"
   >
     <div
-      className="sc-gqjmRU jQzNBL"
+      className="sc-jTzLTM cFAJuX"
     >
       <h2
-        className="sc-bdVaJa kXwlKd"
+        className="sc-htpNat HZoSB"
         size={2}
       >
         Tab 1 content
@@ -84,10 +84,10 @@ exports[`tabs.js renders component 1`] = `
     role="tabpanel"
   >
     <div
-      className="sc-gqjmRU jQzNBL"
+      className="sc-jTzLTM cFAJuX"
     >
       <h2
-        className="sc-bdVaJa kXwlKd"
+        className="sc-htpNat HZoSB"
         size={2}
       >
         Tab 2 content
@@ -102,10 +102,10 @@ exports[`tabs.js renders component 1`] = `
     role="tabpanel"
   >
     <div
-      className="sc-gqjmRU jQzNBL"
+      className="sc-jTzLTM cFAJuX"
     >
       <h2
-        className="sc-bdVaJa kXwlKd"
+        className="sc-htpNat HZoSB"
         size={2}
       >
         Tab 3 content
