@@ -1,7 +1,7 @@
 import React, { useState, useRef, useLayoutEffect } from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
-import { applyStyleModifiers } from 'styled-components-modifiers'
+import styled, { css } from 'styled-components'
+import { CSSTransition } from 'react-transition-group'
 import RichText from '../richText/richText'
 import { robotoRegular } from '../../styles/fonts'
 import { color } from '../../styles/colors'
@@ -16,6 +16,8 @@ const Tabs = ({ label, tabList }) => {
   )
   const tabBarEl = useRef(null)
   const didMount = useRef(false)
+  const INDICATOR_TIMEOUT = 200
+  const PANEL_TIMEOUT = 200
 
   useLayoutEffect(() => {
     if (!didMount.current) {
@@ -24,8 +26,11 @@ const Tabs = ({ label, tabList }) => {
     }
 
     const tabsEl = tabBarEl.current.children
+
     Object.keys(tabsEl).forEach(key => {
-      tabsEl[key].attributes.tabIndex.value === '0' && tabsEl[key].focus()
+      return (
+        tabsEl[key].attributes.tabIndex.value === '0' && tabsEl[key].focus()
+      )
     })
   }, [tabs])
 
@@ -64,41 +69,86 @@ const Tabs = ({ label, tabList }) => {
             id={tab.id}
             onClick={() => setSelectedTab(index)}
             onKeyDown={e => handleTabKeyPress(e, index)}
+            selected={tab.selected}
             tabIndex={tab.focused ? 0 : -1}
             aria-selected={tab.selected}
             aria-controls={tab.content.id}
             key={tab.id}
           >
             {tab.label}
-            <StyledTab.Indicator modifiers={tab.selected && 'selected'} />
+            <CSSTransition in={tab.selected} timeout={INDICATOR_TIMEOUT}>
+              {state => (
+                <StyledTab.Indicator
+                  state={state}
+                  timeout={INDICATOR_TIMEOUT}
+                />
+              )}
+            </CSSTransition>
           </StyledTab>
         ))}
       </StyledTabBar>
       {tabs.map(tab => (
-        <StyledTabPanel
-          role="tabpanel"
-          id={tab.content.id}
-          modifiers={tab.selected && 'selected'}
-          aria-hidden={!tab.selected}
-          aria-labelledby={tab.id}
+        <CSSTransition
           key={tab.content.id}
+          in={tab.selected}
+          timeout={PANEL_TIMEOUT}
         >
-          <RichText content={tab.content} />
-        </StyledTabPanel>
+          {state => (
+            <StyledTabPanel
+              role="tabpanel"
+              id={tab.content.id}
+              state={state}
+              aria-hidden={!tab.selected}
+              aria-labelledby={tab.id}
+              timeout={PANEL_TIMEOUT}
+            >
+              <RichText content={tab.content} />
+            </StyledTabPanel>
+          )}
+        </CSSTransition>
       ))}
     </StyledWrapper>
   )
 }
 
-const TABBAR_CONFIG = {
-  selected: () => `
-    background: ${color.primary};
-  `,
+const getIndicatorTransition = state => {
+  switch (state) {
+    case 'entering':
+    case 'exited':
+      return `
+        transform: translateY(2px);
+      `
+
+    case 'entered':
+    default:
+      return `
+        transform: translateY(0);
+      `
+  }
 }
-const TABPANEL_CONFIG = {
-  selected: () => `
-    display: block;
-  `,
+const getPanelTransition = state => {
+  switch (state) {
+    case 'entering':
+      return `
+        display: block;
+        opacity: 0;
+        transform: scale(0.97) translateY(5px);
+      `
+
+    case 'entered':
+    case 'exiting':
+      return `
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      `
+
+    default:
+      return `
+        display: none;
+        opacity: 0;
+        transform: scale(0.97) translateY(5px);
+      `
+  }
 }
 const StyledWrapper = styled.article`
   ${robotoRegular}
@@ -127,11 +177,9 @@ const StyledTab = styled.button`
   color: #616161;
   overflow: hidden;
   position: relative;
-  transition: all 0.3s ease-out;
 
   &:hover {
     background: #f6fafd;
-    color: #1976d2;
     cursor: pointer;
   }
 
@@ -139,6 +187,12 @@ const StyledTab = styled.button`
     background: #e5effa;
     outline: none;
   }
+
+  ${({ selected }) =>
+    selected &&
+    css`
+      color: #1976d2;
+    `}
 `
 StyledTab.Indicator = styled.span`
   position: absolute;
@@ -146,14 +200,21 @@ StyledTab.Indicator = styled.span`
   left: 0;
   width: 100%;
   height: 2px;
-  background: transparent;
+  background: ${color.primary};
+  transition: transform ${({ timeout }) => timeout}ms ease-in-out;
 
-  ${applyStyleModifiers(TABBAR_CONFIG)};
+  ${({ state }) =>
+    css`
+      ${getIndicatorTransition(state)}
+    `}
 `
 const StyledTabPanel = styled.div`
-  display: none;
+  transition: opacity 200ms linear, transform 200ms ease-in-out;
 
-  ${applyStyleModifiers(TABPANEL_CONFIG)};
+  ${({ state }) =>
+    css`
+      ${getPanelTransition(state)}
+    `}
 `
 
 Tabs.propTypes = {

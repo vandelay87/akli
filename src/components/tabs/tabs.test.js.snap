@@ -12,53 +12,56 @@ exports[`tabs.js renders component 1`] = `
     <button
       aria-controls="c1"
       aria-selected={true}
-      className="sc-fjdhpX kGkANI"
+      className="sc-fjdhpX iVWRpn"
       id="1"
       onClick={[Function]}
       onKeyDown={[Function]}
       role="tab"
+      selected={true}
       tabIndex={0}
     >
       tab 1
       <span
-        className="sc-jzJRlG dyEdpZ"
+        className="sc-jzJRlG beOPzv"
       />
     </button>
     <button
       aria-controls="c2"
       aria-selected={false}
-      className="sc-fjdhpX kGkANI"
+      className="sc-fjdhpX cdsgbw"
       id="2"
       onClick={[Function]}
       onKeyDown={[Function]}
       role="tab"
+      selected={false}
       tabIndex={-1}
     >
       tab 2
       <span
-        className="sc-jzJRlG jfdCvA"
+        className="sc-jzJRlG fvvWqu"
       />
     </button>
     <button
       aria-controls="c3"
       aria-selected={false}
-      className="sc-fjdhpX kGkANI"
+      className="sc-fjdhpX cdsgbw"
       id="3"
       onClick={[Function]}
       onKeyDown={[Function]}
       role="tab"
+      selected={false}
       tabIndex={-1}
     >
       tab 3
       <span
-        className="sc-jzJRlG jfdCvA"
+        className="sc-jzJRlG fvvWqu"
       />
     </button>
   </div>
   <div
     aria-hidden={false}
     aria-labelledby="1"
-    className="sc-cSHVUG byCzGA"
+    className="sc-cSHVUG vEgiL"
     id="c1"
     role="tabpanel"
   >
@@ -66,7 +69,7 @@ exports[`tabs.js renders component 1`] = `
       className="sc-gqjmRU jQzNBL"
     >
       <h2
-        className="sc-bdVaJa kAaGL"
+        className="sc-bdVaJa kXwlKd"
         size={2}
       >
         Tab 1 content
@@ -76,7 +79,7 @@ exports[`tabs.js renders component 1`] = `
   <div
     aria-hidden={true}
     aria-labelledby="2"
-    className="sc-cSHVUG BrZni"
+    className="sc-cSHVUG hxqyyk"
     id="c2"
     role="tabpanel"
   >
@@ -84,7 +87,7 @@ exports[`tabs.js renders component 1`] = `
       className="sc-gqjmRU jQzNBL"
     >
       <h2
-        className="sc-bdVaJa kAaGL"
+        className="sc-bdVaJa kXwlKd"
         size={2}
       >
         Tab 2 content
@@ -94,7 +97,7 @@ exports[`tabs.js renders component 1`] = `
   <div
     aria-hidden={true}
     aria-labelledby="3"
-    className="sc-cSHVUG BrZni"
+    className="sc-cSHVUG hxqyyk"
     id="c3"
     role="tabpanel"
   >
@@ -102,7 +105,7 @@ exports[`tabs.js renders component 1`] = `
       className="sc-gqjmRU jQzNBL"
     >
       <h2
-        className="sc-bdVaJa kAaGL"
+        className="sc-bdVaJa kXwlKd"
         size={2}
       >
         Tab 3 content

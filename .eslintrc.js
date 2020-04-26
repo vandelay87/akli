@@ -27,7 +27,7 @@ module.exports = {
       },
     ],
     'react/jsx-props-no-spreading': 0,
-    indent: ['error', 2],
+    indent: ['error', 2, { SwitchCase: 1 }],
     semi: ['error', 'never'],
     'max-len': ['error', { code: 80, tabWidth: 2 }],
     'import/prefer-default-export': 'off',
