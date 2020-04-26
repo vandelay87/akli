@@ -5,9 +5,16 @@ import { CSSTransition } from 'react-transition-group'
 import { robotoRegular } from '../../styles/fonts'
 import { color } from '../../styles/colors'
 
-const INDICATOR_TIMEOUT = 200
-
-const Tab = ({ label, click, keyDown, selected, focused, controls, id }) => (
+const Tab = ({
+  id,
+  label,
+  click,
+  keyDown,
+  selected,
+  focused,
+  controls,
+  timeout,
+}) => (
   <StyledTab
     role="tab"
     id={id}
@@ -19,10 +26,8 @@ const Tab = ({ label, click, keyDown, selected, focused, controls, id }) => (
     aria-controls={controls}
   >
     {label}
-    <CSSTransition in={selected} timeout={INDICATOR_TIMEOUT}>
-      {state => (
-        <StyledTab.Indicator state={state} timeout={INDICATOR_TIMEOUT} />
-      )}
+    <CSSTransition in={selected} timeout={timeout}>
+      {state => <StyledTab.Indicator state={state} timeout={timeout} />}
     </CSSTransition>
   </StyledTab>
 )
@@ -88,13 +93,17 @@ StyledTab.Indicator = styled.span`
 `
 
 Tab.propTypes = {
+  id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   click: PropTypes.func.isRequired,
   keyDown: PropTypes.func.isRequired,
   selected: PropTypes.bool.isRequired,
   focused: PropTypes.bool.isRequired,
   controls: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
+  timeout: PropTypes.number,
+}
+Tab.defaultProps = {
+  timeout: 200,
 }
 
 export default Tab

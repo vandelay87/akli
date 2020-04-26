@@ -3,10 +3,10 @@
 exports[`tabs.js renders component 1`] = `
 <article
   aria-label="tabs"
-  className="sc-fjdhpX iJpMF"
+  className="sc-jzJRlG eFrhWN"
 >
   <div
-    className="sc-jzJRlG jKlxES"
+    className="sc-cSHVUG gwqELa"
     role="tablist"
   >
     <button
@@ -61,7 +61,7 @@ exports[`tabs.js renders component 1`] = `
   <div
     aria-hidden={false}
     aria-labelledby="1"
-    className="sc-cSHVUG vEgiL"
+    className="sc-fjdhpX bSwkuE"
     id="c1"
     role="tabpanel"
   >
@@ -79,7 +79,7 @@ exports[`tabs.js renders component 1`] = `
   <div
     aria-hidden={true}
     aria-labelledby="2"
-    className="sc-cSHVUG hxqyyk"
+    className="sc-fjdhpX hPRKsr"
     id="c2"
     role="tabpanel"
   >
@@ -97,7 +97,7 @@ exports[`tabs.js renders component 1`] = `
   <div
     aria-hidden={true}
     aria-labelledby="3"
-    className="sc-cSHVUG hxqyyk"
+    className="sc-fjdhpX hPRKsr"
     id="c3"
     role="tabpanel"
   >

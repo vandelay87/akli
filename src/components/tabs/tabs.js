@@ -1,9 +1,8 @@
 import React, { useState, useRef, useLayoutEffect } from 'react'
 import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
-import { CSSTransition } from 'react-transition-group'
+import styled from 'styled-components'
 import Tab from './tab'
-import RichText from '../richText/richText'
+import TabPanel from './tabPanel'
 
 const Tabs = ({ label, tabList }) => {
   const [tabs, setTabs] = useState(
@@ -15,7 +14,6 @@ const Tabs = ({ label, tabList }) => {
   )
   const tabBarEl = useRef(null)
   const didMount = useRef(false)
-  const PANEL_TIMEOUT = 200
 
   useLayoutEffect(() => {
     if (!didMount.current) {
@@ -75,53 +73,18 @@ const Tabs = ({ label, tabList }) => {
         ))}
       </StyledTabBar>
       {tabs.map(tab => (
-        <CSSTransition
+        <TabPanel
+          content={tab.content}
+          selected={tab.selected}
+          labelledBy={tab.id}
+          id={tab.content.id}
           key={tab.content.id}
-          in={tab.selected}
-          timeout={PANEL_TIMEOUT}
-        >
-          {state => (
-            <StyledTabPanel
-              role="tabpanel"
-              id={tab.content.id}
-              state={state}
-              aria-hidden={!tab.selected}
-              aria-labelledby={tab.id}
-              timeout={PANEL_TIMEOUT}
-            >
-              <RichText content={tab.content} />
-            </StyledTabPanel>
-          )}
-        </CSSTransition>
+        />
       ))}
     </StyledWrapper>
   )
 }
 
-const getPanelTransition = state => {
-  switch (state) {
-    case 'entering':
-      return `
-        display: block;
-        opacity: 0;
-        transform: scale(0.97) translateY(5px);
-      `
-
-    case 'entered':
-    case 'exiting':
-      return `
-        opacity: 1;
-        transform: scale(1) translateY(0);
-      `
-
-    default:
-      return `
-        display: none;
-        opacity: 0;
-        transform: scale(0.97) translateY(5px);
-      `
-  }
-}
 const StyledWrapper = styled.article`
   margin: 1em auto;
 `
@@ -136,14 +99,6 @@ const StyledTabBar = styled.div`
     display: none;
   }
 `
-const StyledTabPanel = styled.div`
-  transition: opacity 200ms linear, transform 200ms ease-in-out;
-
-  ${({ state }) =>
-    css`
-      ${getPanelTransition(state)}
-    `}
-`
 
 Tabs.propTypes = {
   label: PropTypes.string.isRequired,
@@ -153,7 +108,7 @@ Tabs.propTypes = {
       label: PropTypes.string,
       content: PropTypes.shape({
         id: PropTypes.string,
-        json: PropTypes.json,
+        json: PropTypes.shape({}),
       }),
     })
   ).isRequired,
