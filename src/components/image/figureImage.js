@@ -32,14 +32,13 @@ const IMAGE_CONFIG = {
 }
 const StyledFigure = styled.figure`
   ${robotoRegular};
-  max-width: ${props =>
-    props.maxWidth ? `${props.maxWidth}px` : 'max-content'};
+  max-width: ${({ maxWidth }) => (maxWidth ? `${maxWidth}px` : 'max-content')};
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 
   ${above.tablet`
-    float: ${props => props.float};
+    float: ${({ float }) => float};
   `}
 
   img {

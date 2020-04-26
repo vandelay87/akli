@@ -41,8 +41,8 @@ const StyledWrapper = styled.div`
   display: inline-flex;
   max-width: 100%;
 `
-const StyledTable = styled.table.attrs(props => ({
-  'aria-label': props.label,
+const StyledTable = styled.table.attrs(({ label }) => ({
+  'aria-label': label,
 }))`
   width: 100%;
   border-collapse: collapse;
@@ -81,7 +81,7 @@ const StyledTableData = styled.td`
   font-weight: 400;
   letter-spacing: 0.01786em;
   padding: 16px;
-  text-align: ${props => (props.numeric ? 'right' : 'left')};
+  text-align: ${({ numeric }) => (numeric ? 'right' : 'left')};
 `
 
 DataTable.propTypes = {

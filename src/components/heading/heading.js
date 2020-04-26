@@ -24,13 +24,13 @@ const letterSpacing = [
 
 const StyledHeading = styled.h1`
   ${robotoRegular}
-  font-size: ${props => fontSize[props.size - 1]};
+  font-size: ${({ size }) => fontSize[size - 1]};
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-weight: ${props => fontWeight[props.size - 1]};
-  line-height: ${props => lineHeight[props.size - 1]};
-  letter-spacing: ${props => letterSpacing[props.size - 1]};
-  text-align: ${props => props.align};
+  font-weight: ${({ size }) => fontWeight[size - 1]};
+  line-height: ${({ size }) => lineHeight[size - 1]};
+  letter-spacing: ${({ size }) => letterSpacing[size - 1]};
+  text-align: ${({ align }) => align};
   
   ${props =>
     props.size === 1 &&
