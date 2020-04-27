@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const SectionBlock = ({ children }) => <StyledSection>{children}</StyledSection>
 
-const StyledSection = styled('section')`
+const StyledSection = styled.section`
   margin: 10em auto;
 `
 

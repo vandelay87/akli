@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 import GlobalStyles from '../styles/global'
 import useWebsiteSettings from '../hooks/useWebsiteSettings'
 import Header from '../components/header/header'
@@ -13,20 +14,17 @@ const Layout = ({ children }) => {
     <>
       <GlobalStyles />
       <Header title={title} />
-      <div
-        style={{
-          margin: '0 auto',
-          maxWidth: '64em',
-          padding: '0px 1.0875rem 1.45rem',
-          paddingTop: 0,
-        }}
-      >
-        <main>{children}</main>
-      </div>
+      <StyledLayout>{children}</StyledLayout>
       <Footer navigation={navigation} />
     </>
   )
 }
+
+const StyledLayout = styled.main`
+  max-width: 64em;
+  margin: 0 auto;
+  padding: 0px 1.0875rem 1.45rem;
+`
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
