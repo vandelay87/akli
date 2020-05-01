@@ -23,6 +23,7 @@ exports[`footer.js renders component 1`] = `
       <a
         className="sc-bdVaJa kuzore"
         href="https://www.google.com"
+        onClick={[Function]}
         rel="noreferrer noopener"
         target="_blank"
       >

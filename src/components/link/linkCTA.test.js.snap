@@ -17,6 +17,7 @@ exports[`linkCTA.js renders component 2`] = `
 <a
   className="sc-bdVaJa kuzore"
   href="https://www.google.com"
+  onClick={[Function]}
   rel="noreferrer noopener"
   target="_blank"
 >

@@ -24,20 +24,24 @@ export const chipsWithLinkMock = [
     id: '1',
     value: 'React.js',
     link: 'https://reactjs.org/',
+    category: 'Technology',
   },
   {
     id: '2',
     value: 'Vue',
     link: 'https://vuejs.org/',
+    category: 'Technology',
   },
   {
     id: '3',
     value: 'Angular',
     link: 'https://angular.io/',
+    category: 'Technology',
   },
   {
     id: '4',
     value: 'Gatsby',
     link: 'https://www.gatsbyjs.org/',
+    category: 'Technology',
   },
 ]
