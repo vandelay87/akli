@@ -7,6 +7,7 @@ export const query = graphql`
       id
       value
       link
+      category
     }
   }
 `

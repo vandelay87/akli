@@ -7,7 +7,7 @@ import regexValidator from './regexValidator'
 const richTextRenderer = richTextJSON => {
   const cleanProperties = dirtyObj => {
     const cleanObj = JSON.parse(JSON.stringify(dirtyObj))
-    const locale = process.env.AKLIAISSAT_CONTENTFUL_LOCALE || 'en-GB'
+    const locale = process.env.CONTENTFUL_LOCALE || 'en-GB'
 
     /* eslint-disable no-param-reassign */
     const deepObjectLoop = obj => {

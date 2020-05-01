@@ -1,13 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link as GatsbyLink } from 'gatsby'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import styled from 'styled-components'
 import { robotoRegular } from '../../styles/fonts'
 
 const LinkCTA = ({ title, link, external }) => (
   <>
     {external ? (
-      <StyledLink href={link} target="_blank" rel="noreferrer noopener">
+      <StyledLink
+        as={OutboundLink}
+        href={link}
+        target="_blank"
+        rel="noreferrer noopener"
+      >
         {title}
       </StyledLink>
     ) : (

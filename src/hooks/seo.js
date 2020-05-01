@@ -36,7 +36,7 @@ SEO.propTypes = {
 }
 SEO.defaultProps = {
   description: '',
-  lang: process.env.AKLIAISSAT_CONTENTFUL_LOCALE || 'en-GB',
+  lang: 'en-GB',
 }
 
 export default SEO

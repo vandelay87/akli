@@ -10,6 +10,15 @@ module.exports = {
     author: '@gatsbyjs',
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GA_KEY,
+        head: false,
+        anonymize: false,
+        respectDNT: true,
+      },
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',
@@ -35,8 +44,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-contentful',
       options: {
-        spaceId: process.env.AKLIAISSAT_CONTENTFUL_SPACE,
-        accessToken: process.env.AKLIAISSAT_CONTENTFUL_TOKEN,
+        spaceId: process.env.CONTENTFUL_SPACE,
+        accessToken: process.env.CONTENTFUL_TOKEN,
       },
     },
     'gatsby-plugin-styled-components',

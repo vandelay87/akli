@@ -1,12 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 import styled from 'styled-components'
 import Heading from '../heading/heading'
 import FigureImage from '../image/figureImage'
 import MaterialButton from '../button/materialButton'
 import { above } from '../../styles/breakpoints'
 
-const openLink = url => () => window.open(url)
+const openLink = (url, category) => () => {
+  window.open(url)
+  trackCustomEvent({
+    category,
+    action: 'click',
+    label: url,
+  })
+}
 
 const Cards = ({ cardList }) => (
   <StyledWrapper>
@@ -19,7 +27,10 @@ const Cards = ({ cardList }) => (
           <p>{card.description}</p>
         </StyledCard.Body>
         {card.link && (
-          <MaterialButton value="View" click={openLink(card.link)} />
+          <MaterialButton
+            value="View"
+            click={openLink(card.link, card.category)}
+          />
         )}
       </StyledCard>
     ))}
@@ -112,6 +123,7 @@ Cards.propTypes = {
       subtitle: PropTypes.string,
       description: PropTypes.string,
       link: PropTypes.string,
+      category: PropTypes.string,
     })
   ).isRequired,
 }

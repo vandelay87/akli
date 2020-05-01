@@ -1,19 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 import styled from 'styled-components'
 import Ripple from '../../hooks/ripple'
 import { robotoRegular } from '../../styles/fonts'
 
-const openLink = url => () => window.open(url)
-
-const handleChipKeyPress = event => action => {
-  event.preventDefault()
-
-  return (
-    event.key === 'Enter' &&
-    (typeof action === 'function' ? action() : openLink(action)())
-  )
+const openLink = (url, category) => () => {
+  window.open(url)
+  trackCustomEvent({
+    category,
+    action: 'click',
+    label: url,
+  })
 }
+
+const handleChipKeyPress = event => (action, category) =>
+  event.key === 'Enter' &&
+  (typeof action === 'function' ? action() : openLink(action, category)())
 
 const Chips = ({ list }) => (
   <StyledWrapper>
@@ -21,8 +24,10 @@ const Chips = ({ list }) => (
       <StyledChip
         role="button"
         tabIndex={0}
-        onClick={chip.link ? openLink(chip.link) : chip.action}
-        onKeyPress={e => handleChipKeyPress(e)(chip.link || chip.action)}
+        onClick={chip.link ? openLink(chip.link, chip.category) : chip.action}
+        onKeyPress={e =>
+          handleChipKeyPress(e)(chip.link || chip.action, chip.category)
+        }
         key={chip.id}
       >
         <span>{chip.value}</span>
@@ -75,6 +80,7 @@ Chips.propTypes = {
       value: PropTypes.string,
       action: PropTypes.func,
       link: PropTypes.string,
+      category: PropTypes.string,
     })
   ).isRequired,
 }
