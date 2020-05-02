@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import { CSSTransition } from 'react-transition-group'
+import Ripple from '../../hooks/ripple'
 import { robotoRegular } from '../../styles/fonts'
 import { color } from '../../styles/colors'
 
@@ -26,6 +27,7 @@ const Tab = ({
     aria-controls={controls}
   >
     {label}
+    <Ripple color={color.primary} duration={600} />
     <CSSTransition in={selected} timeout={timeout}>
       {state => <StyledTab.Indicator state={state} timeout={timeout} />}
     </CSSTransition>

@@ -20,8 +20,7 @@ describe('tabs.js', () => {
 
     expect(tabNodes.at(0).prop('aria-selected')).toBe(true)
     expect(tabNodes.at(1).prop('aria-selected')).toBe(false)
-    expect(tabpanelNodes.at(0).prop('aria-hidden')).toBe(false)
-    expect(tabpanelNodes.at(1).prop('aria-hidden')).toBe(true)
+    expect(tabpanelNodes.prop('aria-hidden')).toBe(false)
 
     act(() => {
       tabNodes.at(1).prop('onClick')()

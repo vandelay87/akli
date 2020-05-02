@@ -5,7 +5,7 @@ import { CSSTransition } from 'react-transition-group'
 import RichText from '../richText/richText'
 
 const TabPanel = ({ id, content, selected, labelledBy, timeout }) => (
-  <CSSTransition key={id} in={selected} timeout={timeout}>
+  <CSSTransition in={selected} timeout={timeout} unmountOnExit>
     {state => (
       <StyledTabPanel
         role="tabpanel"
@@ -25,7 +25,6 @@ const getPanelTransition = state => {
   switch (state) {
     case 'entering':
       return `
-        display: block;
         opacity: 0;
         transform: scale(0.97) translateY(5px);
       `
@@ -39,14 +38,14 @@ const getPanelTransition = state => {
 
     default:
       return `
-        display: none;
         opacity: 0;
         transform: scale(0.97) translateY(5px);
       `
   }
 }
 const StyledTabPanel = styled.div`
-  transition: opacity 200ms linear, transform 200ms ease-in-out;
+  transition: opacity ${({ timeout }) => timeout}ms linear,
+    transform ${({ timeout }) => timeout}ms ease-in-out;
 
   ${({ state }) =>
     css`

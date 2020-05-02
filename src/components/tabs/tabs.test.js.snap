@@ -12,7 +12,7 @@ exports[`tabs.js renders component 1`] = `
     <button
       aria-controls="c1"
       aria-selected={true}
-      className="sc-bdVaJa hktHNt"
+      className="sc-bwzfXH bIKAQi"
       id="1"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -21,14 +21,19 @@ exports[`tabs.js renders component 1`] = `
       tabIndex={0}
     >
       tab 1
+      <div
+        className="sc-bdVaJa hMQdQq"
+        color="#1976d2"
+        onMouseDown={[Function]}
+      />
       <span
-        className="sc-bwzfXH cSoCyb"
+        className="sc-htpNat iCtHmj"
       />
     </button>
     <button
       aria-controls="c2"
       aria-selected={false}
-      className="sc-bdVaJa ezQdLR"
+      className="sc-bwzfXH cUvomQ"
       id="2"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -37,14 +42,19 @@ exports[`tabs.js renders component 1`] = `
       tabIndex={-1}
     >
       tab 2
+      <div
+        className="sc-bdVaJa hMQdQq"
+        color="#1976d2"
+        onMouseDown={[Function]}
+      />
       <span
-        className="sc-bwzfXH kkjYom"
+        className="sc-htpNat dsHXqs"
       />
     </button>
     <button
       aria-controls="c3"
       aria-selected={false}
-      className="sc-bdVaJa ezQdLR"
+      className="sc-bwzfXH cUvomQ"
       id="3"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -53,15 +63,20 @@ exports[`tabs.js renders component 1`] = `
       tabIndex={-1}
     >
       tab 3
+      <div
+        className="sc-bdVaJa hMQdQq"
+        color="#1976d2"
+        onMouseDown={[Function]}
+      />
       <span
-        className="sc-bwzfXH kkjYom"
+        className="sc-htpNat dsHXqs"
       />
     </button>
   </div>
   <div
     aria-hidden={false}
     aria-labelledby="1"
-    className="sc-fjdhpX bSwkuE"
+    className="sc-fjdhpX twTGk"
     id="c1"
     role="tabpanel"
   >
@@ -69,46 +84,10 @@ exports[`tabs.js renders component 1`] = `
       className="sc-jTzLTM cFAJuX"
     >
       <h2
-        className="sc-htpNat HZoSB"
+        className="sc-bxivhb bdCLac"
         size={2}
       >
         Tab 1 content
-      </h2>
-    </div>
-  </div>
-  <div
-    aria-hidden={true}
-    aria-labelledby="2"
-    className="sc-fjdhpX hPRKsr"
-    id="c2"
-    role="tabpanel"
-  >
-    <div
-      className="sc-jTzLTM cFAJuX"
-    >
-      <h2
-        className="sc-htpNat HZoSB"
-        size={2}
-      >
-        Tab 2 content
-      </h2>
-    </div>
-  </div>
-  <div
-    aria-hidden={true}
-    aria-labelledby="3"
-    className="sc-fjdhpX hPRKsr"
-    id="c3"
-    role="tabpanel"
-  >
-    <div
-      className="sc-jTzLTM cFAJuX"
-    >
-      <h2
-        className="sc-htpNat HZoSB"
-        size={2}
-      >
-        Tab 3 content
       </h2>
     </div>
   </div>
