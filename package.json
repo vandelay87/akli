@@ -19,16 +19,17 @@
     "gatsby-source-contentful": "^2.2.5",
     "gatsby-source-filesystem": "^2.2.2",
     "gatsby-transformer-sharp": "^2.4.3",
+    "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^5.2.1",
     "react-transition-group": "^4.3.0",
-    "styled-components": "^4.4.1",
-    "styled-components-modifiers": "^1.2.5"
+    "styled-components": "^4.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
+    "@danbruegge/gatsby-plugin-stylelint": "^4.1.0",
     "@storybook/addon-a11y": "^5.3.17",
     "@storybook/addon-actions": "^5.3.17",
     "@storybook/addon-knobs": "^5.3.17",
@@ -46,7 +47,11 @@
     "eslint-plugin-react-hooks": "^1.7.0",
     "jest": "^24.9.0",
     "prettier": "^1.19.1",
-    "react-test-renderer": "^16.13.1"
+    "react-test-renderer": "^16.13.1",
+    "stylelint": "^13.3.3",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.10.0"
   },
   "keywords": [
     "gatsby"

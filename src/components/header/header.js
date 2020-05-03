@@ -17,7 +17,7 @@ const StyledHeader = styled.header`
 const StyledTitle = styled.span`
   ${robotoRegular}
   color: ${color.onPrimary};
-  font-size: 1.25rem;;
+  font-size: 1.25rem;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-weight: 500;

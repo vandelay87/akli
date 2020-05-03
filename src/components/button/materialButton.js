@@ -1,37 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
-import { applyStyleModifiers } from 'styled-components-modifiers'
+import styled, { css } from 'styled-components'
 import Ripple from '../../hooks/ripple'
 import { robotoRegular } from '../../styles/fonts'
 import { color } from '../../styles/colors'
 
 const MaterialButton = ({ value, click, raised }) => (
-  <StyledButton onClick={click} modifiers={raised && 'raised'} role="button">
+  <StyledButton onClick={click} raised={raised} role="button">
     {value}
     <Ripple color={color.primary} duration={600} />
   </StyledButton>
 )
 
-const BUTTON_CONFIG = {
-  raised: () => `
-    background: ${color.primary};
-    color: #fff;
-    box-shadow: rgba(0,0,0,0.2) 0px 3px 6px;
-
-    &:hover {
-      background: #3a91e7;
-      color: #fff;
-      box-shadow: rgba(0,0,0,0.4) 0px 3px 8px;
-    }
-
-    &:focus {
-      background: #3a91e7;
-      color: #fff;
-      box-shadow: rgba(0,0,0,0.4) 0px 3px 8px;
-    }
-  `,
-}
 const StyledButton = styled.button`
   ${robotoRegular}
   transition: background 0.3s ease;
@@ -58,7 +38,25 @@ const StyledButton = styled.button`
     outline: none;
   }
 
-  ${applyStyleModifiers(BUTTON_CONFIG)};
+  ${({ raised }) =>
+    raised &&
+    css`
+      background: ${color.primary};
+      color: #fff;
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 6px;
+
+      &:hover {
+        background: #3a91e7;
+        color: #fff;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 8px;
+      }
+
+      &:focus {
+        background: #3a91e7;
+        color: #fff;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 8px;
+      }
+    `}
 `
 
 MaterialButton.propTypes = {

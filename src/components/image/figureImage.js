@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
-import styled from 'styled-components'
-import { applyStyleModifiers } from 'styled-components-modifiers'
+import styled, { css } from 'styled-components'
 import { robotoRegular } from '../../styles/fonts'
 import { color } from '../../styles/colors'
 import { above } from '../../styles/breakpoints'
@@ -24,12 +23,6 @@ const FigureImage = ({ image, caption, align, maxWidth }) => (
   </StyledFigure>
 )
 
-const IMAGE_CONFIG = {
-  caption: () => `
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  `,
-}
 const StyledFigure = styled.figure`
   ${robotoRegular};
   max-width: ${({ maxWidth }) => (maxWidth ? `${maxWidth}px` : 'max-content')};
@@ -46,7 +39,13 @@ const StyledFigure = styled.figure`
     max-width: 100%;
     vertical-align: middle;
     border-radius: 3px;
-    ${applyStyleModifiers(IMAGE_CONFIG)};
+
+    ${({ caption }) =>
+      caption &&
+      css`
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      `}
   }
 `
 const StyledCaption = styled.figcaption`

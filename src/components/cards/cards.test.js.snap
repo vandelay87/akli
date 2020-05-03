@@ -62,7 +62,7 @@ exports[`cards.js renders component 3`] = `
     className="sc-bZQynM eKUKWx"
   >
     <figure
-      className="sc-bwzfXH cmJVxu"
+      className="sc-bwzfXH ldbBzf"
     >
       <img
         src="https://via.placeholder.com/400x200"
@@ -93,7 +93,7 @@ exports[`cards.js renders component 3`] = `
     className="sc-bZQynM eKUKWx"
   >
     <figure
-      className="sc-bwzfXH cmJVxu"
+      className="sc-bwzfXH ldbBzf"
     >
       <img
         src="https://via.placeholder.com/400x200"
@@ -124,7 +124,7 @@ exports[`cards.js renders component 3`] = `
     className="sc-bZQynM eKUKWx"
   >
     <figure
-      className="sc-bwzfXH cmJVxu"
+      className="sc-bwzfXH ldbBzf"
     >
       <img
         src="https://via.placeholder.com/400x200"
@@ -175,7 +175,7 @@ exports[`cards.js renders component 4`] = `
       </p>
     </div>
     <button
-      className="sc-ifAKCX bRkpKd"
+      className="sc-ifAKCX jsHUpv"
       onClick={[Function]}
       role="button"
     >

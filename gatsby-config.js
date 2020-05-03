@@ -49,5 +49,9 @@ module.exports = {
       },
     },
     'gatsby-plugin-styled-components',
+    {
+      resolve: '@danbruegge/gatsby-plugin-stylelint',
+      options: { files: ['**/*.{js,jsx}'] },
+    },
   ],
 }

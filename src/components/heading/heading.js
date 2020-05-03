@@ -32,8 +32,8 @@ const StyledHeading = styled.h1`
   letter-spacing: ${({ size }) => letterSpacing[size - 1]};
   text-align: ${({ align }) => align};
   
-  ${props =>
-    props.size === 1 &&
+  ${({ size }) =>
+    size === 1 &&
     css`
       ${below.mobile`
         font-size: 4.5rem;

@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
-import normalize from './normalize'
+import normalize from 'normalize.css'
 import { fontFaces, robotoRegular } from './fonts'
 
 const GlobalStyles = createGlobalStyle`
