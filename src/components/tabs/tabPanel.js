@@ -36,6 +36,7 @@ const getPanelTransition = state => {
         transform: scale(1) translateY(0);
       `
 
+    case 'exited':
     default:
       return `
         opacity: 0;

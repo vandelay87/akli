@@ -43,6 +43,7 @@ const getIndicatorTransition = state => {
       `
 
     case 'entered':
+    case 'exiting':
     default:
       return `
         transform: translateY(0);

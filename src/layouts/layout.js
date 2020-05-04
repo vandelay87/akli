@@ -5,6 +5,7 @@ import GlobalStyles from '../styles/global'
 import useWebsiteSettings from '../hooks/useWebsiteSettings'
 import Header from '../components/header/header'
 import Footer from '../components/footer/footer'
+import { above } from '../styles/breakpoints'
 
 const Layout = ({ children }) => {
   const { title } = useWebsiteSettings().header
@@ -14,16 +15,28 @@ const Layout = ({ children }) => {
     <>
       <GlobalStyles />
       <Header title={title} />
-      <StyledLayout>{children}</StyledLayout>
+      <StyledMain>{children}</StyledMain>
       <Footer navigation={navigation} />
     </>
   )
 }
 
-const StyledLayout = styled.main`
+const StyledMain = styled.main`
   max-width: 64em;
   margin: 0 auto;
-  padding: 0px 1.0875rem 1.45rem;
+  padding: 0 1.125em 1.5em;
+
+  ${above.tabletLarge`
+    padding: 0 2em 1.5em;
+  `}
+
+  ${above.desktop`
+    padding: 0 0 1.5em;
+  `}
+
+  ${above.desktopLarge`
+    padding: 0 0 2em;
+  `}
 `
 
 Layout.propTypes = {
