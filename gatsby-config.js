@@ -4,10 +4,9 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
-    description:
-      'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
-    author: '@gatsbyjs',
+    title: 'akli.dev',
+    description: 'A personal website.',
+    author: 'Akli Aissat',
   },
   plugins: [
     {
@@ -23,8 +22,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'images',
-        path: `${__dirname}/src/images`,
+        name: 'assets',
+        path: `${__dirname}/src/assets`,
       },
     },
     'gatsby-transformer-sharp',
@@ -32,15 +31,16 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'akli.dev',
+        short_name: 'akli.dev',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
-        display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        background_color: '#1976d2',
+        theme_color: '#1976d2',
+        display: 'standalone',
+        icon: 'src/assets/images/icon.png',
       },
     },
+    'gatsby-plugin-offline',
     {
       resolve: 'gatsby-source-contentful',
       options: {
