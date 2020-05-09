@@ -15,7 +15,8 @@ exports[`chips.js renders component 1`] = `
       Small
     </span>
     <div
-      className="sc-bdVaJa esPUWU"
+      aria-hidden="true"
+      className="sc-bdVaJa dTEDNV"
       color="gray"
       onMouseDown={[Function]}
     />
@@ -31,7 +32,8 @@ exports[`chips.js renders component 1`] = `
       Medium
     </span>
     <div
-      className="sc-bdVaJa esPUWU"
+      aria-hidden="true"
+      className="sc-bdVaJa dTEDNV"
       color="gray"
       onMouseDown={[Function]}
     />
@@ -47,7 +49,8 @@ exports[`chips.js renders component 1`] = `
       Large
     </span>
     <div
-      className="sc-bdVaJa esPUWU"
+      aria-hidden="true"
+      className="sc-bdVaJa dTEDNV"
       color="gray"
       onMouseDown={[Function]}
     />
@@ -70,7 +73,8 @@ exports[`chips.js renders component 2`] = `
       React.js
     </span>
     <div
-      className="sc-bdVaJa esPUWU"
+      aria-hidden="true"
+      className="sc-bdVaJa dTEDNV"
       color="gray"
       onMouseDown={[Function]}
     />
@@ -86,7 +90,8 @@ exports[`chips.js renders component 2`] = `
       Vue
     </span>
     <div
-      className="sc-bdVaJa esPUWU"
+      aria-hidden="true"
+      className="sc-bdVaJa dTEDNV"
       color="gray"
       onMouseDown={[Function]}
     />
@@ -102,7 +107,8 @@ exports[`chips.js renders component 2`] = `
       Angular
     </span>
     <div
-      className="sc-bdVaJa esPUWU"
+      aria-hidden="true"
+      className="sc-bdVaJa dTEDNV"
       color="gray"
       onMouseDown={[Function]}
     />
@@ -118,7 +124,8 @@ exports[`chips.js renders component 2`] = `
       Gatsby
     </span>
     <div
-      className="sc-bdVaJa esPUWU"
+      aria-hidden="true"
+      className="sc-bdVaJa dTEDNV"
       color="gray"
       onMouseDown={[Function]}
     />

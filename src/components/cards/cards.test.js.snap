@@ -181,7 +181,8 @@ exports[`cards.js renders component 4`] = `
     >
       View
       <div
-        className="sc-bxivhb kyOqOf"
+        aria-hidden="true"
+        className="sc-bxivhb feRUAx"
         color="#1976d2"
         onMouseDown={[Function]}
       />

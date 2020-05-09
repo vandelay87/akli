@@ -8,7 +8,8 @@ exports[`materialButton.js renders component 1`] = `
 >
   Click me
   <div
-    className="sc-bdVaJa hMQdQq"
+    aria-hidden="true"
+    className="sc-bdVaJa JrgfE"
     color="#1976d2"
     onMouseDown={[Function]}
   />
@@ -23,7 +24,8 @@ exports[`materialButton.js renders component 2`] = `
 >
   Toggle raised
   <div
-    className="sc-bdVaJa hMQdQq"
+    aria-hidden="true"
+    className="sc-bdVaJa JrgfE"
     color="#1976d2"
     onMouseDown={[Function]}
   />
