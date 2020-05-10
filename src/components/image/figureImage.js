@@ -10,7 +10,7 @@ const getWidth = imageDetails => (imageDetails ? imageDetails.image.width : '')
 
 const FigureImage = ({ image, caption, align, maxWidth }) => (
   <StyledFigure
-    modifiers={caption && 'caption'}
+    caption={caption && caption}
     maxWidth={maxWidth || getWidth(image.file.details)}
     float={align}
   >

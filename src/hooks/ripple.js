@@ -50,12 +50,10 @@ const Ripple = ({ duration, color }) => {
       aria-hidden="true"
     >
       {rippleArray.length > 0 &&
-        rippleArray.map(ripple => {
+        rippleArray.map((ripple, index) => {
           return (
             <span
-              key={Math.random()
-                .toString(36)
-                .slice(-8)}
+              key={`span${index}`}
               style={{
                 top: ripple.y,
                 left: ripple.x,
