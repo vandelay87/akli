@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import LinkCTA from '../link/linkCTA'
+import Link from '../link/link'
 import { color } from '../../styles/colors'
 
 const Footer = ({ navigation }) => (
@@ -9,11 +9,7 @@ const Footer = ({ navigation }) => (
     <StyledNavigation>
       {navigation.map(link => (
         <li key={link.id}>
-          <LinkCTA
-            title={link.title}
-            link={link.link}
-            external={link.external}
-          />
+          <Link title={link.title} link={link.link} external={link.external} />
         </li>
       ))}
     </StyledNavigation>

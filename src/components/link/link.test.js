@@ -1,7 +1,7 @@
 import renderer from 'react-test-renderer'
-import { internal, external } from './linkCTA.stories'
+import { internal, external } from './link.stories'
 
-describe('linkCTA.js', () => {
+describe('link.js', () => {
   it('renders component', () => {
     const internalTree = renderer.create(internal()).toJSON()
     const externalTree = renderer.create(external()).toJSON()

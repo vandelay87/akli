@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`linkCTA.js renders component 1`] = `
+exports[`link.js renders component 1`] = `
 <a
   aria-current="page"
   className="sc-bdVaJa kuzore"
@@ -13,7 +13,7 @@ exports[`linkCTA.js renders component 1`] = `
 </a>
 `;
 
-exports[`linkCTA.js renders component 2`] = `
+exports[`link.js renders component 2`] = `
 <a
   className="sc-bdVaJa kuzore"
   href="https://www.google.com"

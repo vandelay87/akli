@@ -30,5 +30,12 @@ module.exports = {
     semi: ['error', 'never'],
     'max-len': ['error', { code: 80, tabWidth: 2 }],
     'import/prefer-default-export': 'off',
+    'jsx-a11y/anchor-is-valid': [
+      'error',
+      {
+        components: ['Link'],
+        specialLink: ['to', 'link'],
+      },
+    ],
   },
 }

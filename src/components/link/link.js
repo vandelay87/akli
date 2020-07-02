@@ -5,7 +5,7 @@ import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import styled from 'styled-components'
 import { robotoRegular } from '../../styles/fonts'
 
-const LinkCTA = ({ title, link, external }) => (
+const Link = ({ title, link, external }) => (
   <>
     {external ? (
       <StyledLink
@@ -34,13 +34,13 @@ const StyledLink = styled('a')`
   letter-spacing: 0.03125em;
 `
 
-LinkCTA.propTypes = {
+Link.propTypes = {
   title: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
   external: PropTypes.bool,
 }
-LinkCTA.defaultProps = {
+Link.defaultProps = {
   external: false,
 }
 
-export default LinkCTA
+export default Link
