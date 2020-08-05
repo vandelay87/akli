@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`switch.js renders component 1`] = `
+Array [
+  <input
+    checked={true}
+    className="sc-bdVaJa jTNZgx"
+    id="switch"
+    onChange={[Function]}
+    role="switch"
+    type="checkbox"
+  />,
+  <label
+    className="sc-bwzfXH eQCjbJ"
+    htmlFor="switch"
+  >
+    <span
+      className="sc-htpNat hIwdvW"
+    >
+      dark mode
+    </span>
+    <span
+      className="sc-bxivhb aNRpm"
+      role="presentation"
+    />
+  </label>,
+]
+`;
