@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 📅 TBC
+
+**➕ Added**
+
+- Switch component.
+
 ## 📅 10-05-2020
 
 **➕ Added**
